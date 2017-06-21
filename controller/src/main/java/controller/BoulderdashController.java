@@ -5,6 +5,10 @@
 
 package controller;
 
+import java.io.IOException;
+import view.*;
+import model.*;
+
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
   // The Constant speed.
   private static final int speed = 2;

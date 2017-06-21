@@ -5,6 +5,11 @@
 
 package main;
 
+import model.*;
+import controller.*;
+import view.*;
+
+
 public abstract class main {
   //Intial value for the player
   private static final int startX = 5;
