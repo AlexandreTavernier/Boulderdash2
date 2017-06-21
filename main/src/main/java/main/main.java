@@ -5,6 +5,8 @@
 
 package main;
 
+
+
 public abstract class main {
   //Intial value for the player
   private static final int startX = 5;
