@@ -1,0 +1,31 @@
+Fonctionnalité:
+
+Niveau
+
+  Affichage map
+
+    Timer
+
+    Score
+      Point + Temps restant
+
+    Joueur
+      Deplacement
+        casse la terre
+      Recuperer les diamants
+      Pousser les pierres
+
+    Monstre
+      Deplacement
+        aleatoire
+      Touche le joueur -> mort
+
+    Pierre
+      Graviter
+        tombe sur le joueur -> mort
+        tombe sur un monstre -> diamant
+
+    Diamant
+      Graviter
+      100 points
+      Touche joueur -> mort
