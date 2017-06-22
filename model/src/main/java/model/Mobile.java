@@ -81,6 +81,7 @@ public class Mobile extends Element implements IMobile {
 
 	private void setHasMoved() {
     this.getMap().setMobileHasChanged();
+    
     }
 	
 	/* (non-Javadoc)
@@ -97,6 +98,7 @@ public class Mobile extends Element implements IMobile {
 	public final void setX(final int x) {
         this.getPosition().x = x;
         if (this.isDead()) {
+        	System.out.println("Dead");
             this.die();
         }
 	}    
@@ -136,6 +138,7 @@ public class Mobile extends Element implements IMobile {
     }
     
     protected void die() {
+    	
         this.alive = false;
         this.setHasMoved();
     }
@@ -146,7 +149,6 @@ public class Mobile extends Element implements IMobile {
     @Override
 	public Boolean isDead() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
-        
     }
     
     /* (non-Javadoc)
