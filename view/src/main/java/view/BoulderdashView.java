@@ -117,7 +117,11 @@ public class BoulderdashView implements Runnable, KeyListener {
        		return this.map;
        	}
        	
-       	
+       	private void setMap(final IMap map) throws IOException {
+            this.map = map;
+            for (int x = 0; x < this.getMap().getWidth(); x++) {
+                for (int y = 0; y < this.getMap().getHeight(); y++) {
+                    this.getMap().getOnTheMapXY(x, y).getSprite().loadImage();
                 }
                 
             }
