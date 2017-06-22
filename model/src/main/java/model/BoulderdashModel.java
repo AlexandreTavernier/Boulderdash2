@@ -18,17 +18,21 @@ public class BoulderdashModel implements IBoulderdashModel {
 	private  IMap level;
 
 	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY) throws IOException {
-		this.setlevel(new Map(fileName));
-		this.setPlayer(new Player(playerStartX, playerStartY, this.getLevel()));
+		this.setMap(new Map(fileName));
+		this.setPlayer(new Player(playerStartX, playerStartY, this.getMap()));
 	}
 
 	@Override
 	public final IMobile getPlayer() {
 			return this.Player;
 	}
+	
+	private void setMap(final IMap map){
+		this.level = map;
+	}
 
 	@Override
-	public final IMap getLevel() {
+	public final IMap getMap() {
 		return this.level;
 	}
 

@@ -4,6 +4,9 @@
  */
 package Interface;
 
-public interface IOrderPerformer {
+import java.io.IOException;
 
+public interface IOrderPerformer {
+	
+	void orderPerform(UserOrder userOrder) throws IOException;
 }

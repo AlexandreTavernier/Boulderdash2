@@ -10,7 +10,7 @@ import Interface.IMobile;
 
 public interface IBoulderdashModel {
 	
-	IMap getLevel();
+	IMap getMap();
 	
 	IMobile getPlayer();
 }

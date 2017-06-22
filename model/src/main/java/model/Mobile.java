@@ -10,11 +10,13 @@ import Interface.IMap;
 import Interface.IMobile;
 import Interface.ISprite;
 import Interface.Permeability;
+import fr.exia.showboard.IBoard;
 
 public class Mobile extends Element implements IMobile {
 	private Point position;
 	private Boolean alive = true;
 	private IMap map;
+	private IBoard board;
 	
 	
 	Mobile(final ISprite sprite, final IMap map, final Permeability permeability){
@@ -146,7 +148,7 @@ public class Mobile extends Element implements IMobile {
 	 */
     @Override
 	public Boolean isDead() {
-        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+        return ((Element) this.getMap().getOnTheMapXY(this.getX(), this.getY())).getPermeability() == Permeability.BLOCKING;
     }
     
     /* (non-Javadoc)
@@ -164,8 +166,8 @@ public class Mobile extends Element implements IMobile {
 	public void setPosition(final Point position) {
         this.position = position;
     }
-
-    protected IMap getBoard() {
-        return this.map;
-    }    
+    
+    protected IBoard getBoard() {
+        return this.board;
+    }
 }

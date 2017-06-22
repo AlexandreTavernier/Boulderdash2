@@ -4,8 +4,6 @@ package model;
  * @version 1
  */
 
-import java.io.IOException;
-
 import Interface.ISprite;
 import Interface.Permeability;
 

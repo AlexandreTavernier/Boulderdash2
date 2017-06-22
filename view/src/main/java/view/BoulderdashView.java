@@ -9,21 +9,18 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
-
-
-
 import Interface.IBoulderdashView;
-
 import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
 import Interface.UserOrder;
 import fr.exia.showboard.BoardFrame;
 
-public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener {
+public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 10;
 	private static final int squareSize = 100;
 	private Rectangle closeView;
@@ -58,7 +55,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
 
             for (int x = 0; x < this.getMap().getWidth(); x++) {
                 for (int y = 0; y < this.getMap().getHeight(); y++) {
-                    boardFrame.addSquare( this.map.getOnTheMapXY(x, y), x, y);
+                    boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
                 }
             }
             boardFrame.addPawn(this.getPlayer());
@@ -103,14 +100,19 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
     		   userOrder = UserOrder.NOP;
     		   break;
     	   }
+<<<<<<< HEAD
     	   
+=======
+    	 return userOrder;  
+    	 
+>>>>>>> dfa6a997728571dad3dab557f82ee1cefb088ae8
        }
     	 public void KeyTyped(final KeyEvent keyEvent){   
     	   	}
     	 
     	 public final void keyPressed(final KeyEvent keyEvent){
     	 	try{
-    	 		this.getOrderPerformer().orderPerform(keyCodeToUserOrder(keyEvent.getKeyCode()))
+    	 		this.getOrderPerformer().orderPerform(keyCodeToUserOrder(keyEvent.getKeyCode()));
     	 	} catch (final IOException exception){
     	 		exception.printStackTrace();
     	 	}
@@ -167,9 +169,10 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
        		return this.orderPerformer;
        	}
        	
-       	public final void setOrderPerformer(final IOderPerformer orderPerformer) {
+       	public final void setOrderPerformer(final IOrderPerformer orderPerformer) {
        		this.orderPerformer = orderPerformer;
        	}
+
 }
 
 	

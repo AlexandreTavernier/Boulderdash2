@@ -7,7 +7,7 @@ package Interface;
 
 public interface IBoulderdashModel {
 	
-	IMap getLevel();
+	IMap getMap();
 	
 	IMobile getPlayer();
 }
