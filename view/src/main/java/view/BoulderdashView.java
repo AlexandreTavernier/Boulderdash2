@@ -14,7 +14,11 @@ import javax.swing.SwingUtilities;
 
 
 import fr.exia.showboard.BoardFrame;
+<<<<<<< HEAD
 import Interface.IBoulderdashView;
+=======
+import fr.exia.showboard.ISquare;
+>>>>>>> 41bab14f9055f4bb76bad5d9e43cd05e641612ff
 import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
@@ -55,7 +59,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
 
             for (int x = 0; x < this.getMap().getWidth(); x++) {
                 for (int y = 0; y < this.getMap().getHeight(); y++) {
-                    boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
+                    boardFrame.addSquare( this.map.getOnTheMapXY(x, y), x, y);
                 }
             }
             boardFrame.addPawn(this.getPlayer());
@@ -79,6 +83,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
         		y = (y+ 1) % this.getMap().getHeight();
         		System.out.print("\n");
         	}
+        }
        
        private static UserOrder keyCodeToUserOrder(final int keyCode){
     	   UserOrder userOrder;
@@ -99,7 +104,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
     		   userOrder = UserOrder.NOP;
     		   break;
     	   }
-    	   
+       }
     	 public void KeyTyped(final KeyEvent keyEvent){   
     	   	}
     	 
@@ -165,6 +170,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
        	public final void setOrderPerformer(final IOderPerformer orderPerformer) {
        		this.orderPerformer = orderPerformer;
        	}
+}
 
 	
 
