@@ -3,7 +3,7 @@ package model;
  * @author Bruno
  * @version 1
  */
- 
+
 import java.io.IOException;
 
 public class Air extends MotionlessElement {
