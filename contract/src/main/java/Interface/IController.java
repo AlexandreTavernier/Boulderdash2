@@ -1,4 +1,4 @@
-package controller;
+package Interface;
 
 /**
  * <h1>The Interface IController.</h1>

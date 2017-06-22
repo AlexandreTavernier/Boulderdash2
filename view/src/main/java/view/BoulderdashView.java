@@ -11,11 +11,14 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
+
+import Interface.IBoulderdashView;
 import fr.exia.showboard.BoardFrame;
-import model.IMap;
-import model.IMobile;
-import controller.IOrderPerformer;
-import controller.UserOrder;
+
+import Interface.IMap;
+import Interface.IMobile;
+import Interface.IOrderPerformer;
+import Interface.UserOrder;
 
 public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 10;

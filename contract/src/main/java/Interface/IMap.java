@@ -2,7 +2,7 @@
  * @author Alexandre
  * @version 1.1
  */
-package model;
+package Interface;
 
 import java.util.Observable;
 

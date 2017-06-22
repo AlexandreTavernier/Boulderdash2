@@ -1,4 +1,4 @@
-package model;
+package Interface;
 
 import java.awt.Image;
 import java.io.IOException;

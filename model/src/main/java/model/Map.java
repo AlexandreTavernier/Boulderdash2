@@ -10,7 +10,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Observable;
 
-public class Map extends Oservable implements IMap {
+import Interface.IElement;
+import Interface.IMap;
+
+public class Map extends Observable implements IMap {
 	private int width;
 	private int height;
 	private IElement[][] onTheMap;

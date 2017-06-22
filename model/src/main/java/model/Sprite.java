@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+import Interface.ISprite;
+
 public class Sprite implements ISprite {
 	private Image image;
 	private String imageName;

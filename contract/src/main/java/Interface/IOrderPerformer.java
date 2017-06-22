@@ -2,7 +2,7 @@
  * @author Bruno
  * @version 1
  */
-package controller;
+package Interface;
 
 public interface IOrderPerformer {
 

@@ -6,6 +6,10 @@ package model;
 
 import java.awt.Image;
 
+import Interface.IElement;
+import Interface.ISprite;
+import Interface.Permeability;
+
 public abstract class Element implements IElement {
 	private ISprite sprite;
 	private Permeability permeability;

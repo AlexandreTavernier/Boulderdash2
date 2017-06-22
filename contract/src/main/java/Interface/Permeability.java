@@ -1,5 +1,5 @@
 
-package model;
+package Interface;
 
 public enum Permeability {
 	BLOCKING,

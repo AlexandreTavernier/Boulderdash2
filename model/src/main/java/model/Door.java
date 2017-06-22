@@ -4,6 +4,9 @@
  */
 package model;
 
+import Interface.ISprite;
+import Interface.Permeability;
+
 public class Door extends MotionlessElement {
 	private static final ISprite SPRITE = new Sprite('E', "Door.jpg");
 

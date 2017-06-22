@@ -6,6 +6,11 @@ package model;
 
 import java.awt.Point;
 
+import Interface.IMap;
+import Interface.IMobile;
+import Interface.ISprite;
+import Interface.Permeability;
+
 public class Mobile extends Element implements IMobile {
 	private Point position;
 	private Boolean alive = true;

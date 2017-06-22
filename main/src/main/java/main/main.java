@@ -5,8 +5,11 @@
 
 package main;
 
+import Interface.IBoulderdashController;
+import Interface.IBoulderdashView;
+import controller.BoulderdashController;
+import controller1.*;
 import model.*;
-import controller.*;
 import view.*;
 
 

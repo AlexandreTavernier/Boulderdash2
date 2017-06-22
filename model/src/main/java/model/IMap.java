@@ -6,6 +6,8 @@ package model;
 
 import java.util.Observable;
 
+import Interface.IElement;
+
 public interface IMap {
 
 	int getWidth();

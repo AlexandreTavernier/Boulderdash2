@@ -2,6 +2,10 @@ package model;
 
 import java.io.IOException;
 
+import Interface.IBoulderdashModel;
+import Interface.IMap;
+import Interface.IMobile;
+
 /**
  * @author Bruno
  * @version 1

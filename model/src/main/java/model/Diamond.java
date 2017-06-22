@@ -7,6 +7,10 @@ package model;
 
 import java.io.IOException;
 
+import Interface.IMap;
+import Interface.ISprite;
+import Interface.Permeability;
+
 public class Diamond extends Mobile {
 	private final static ISprite SPRITE = new Sprite('D',"Diamond.jpg");
 	

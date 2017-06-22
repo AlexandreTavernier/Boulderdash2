@@ -1,5 +1,9 @@
 package model;
 
+import Interface.IMap;
+import Interface.ISprite;
+import Interface.Permeability;
+
 /**
  * @author Bruno
  * @version 1
