@@ -30,7 +30,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
 	
 
 
-	public BoulderdashView(final IMap map, final IMobile Player) throws IOException{
+	public BoulderdashView(final IMap Map, final IMobile Player) throws IOException{
 		this.setView(mapView);
 		this.setMap(map);
 		this.setPlayer(Player);
@@ -44,7 +44,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
 	}
         public final void run() {
             final BoardFrame boardFrame = new BoardFrame("Close view");
-            boardFrame.setDimension(new Dimension(this.getmap().getWidth(), this.getmap().getHeight()));
+            boardFrame.setDimension(new Dimension(this.getMap().getWidth(), this.getMap().getHeight()));
             boardFrame.setDisplayFrame(this.closeView);
             boardFrame.setSize(this.closeView.width * squareSize, this.closeView.height * squareSize);
             boardFrame.setHeightLooped(true);
