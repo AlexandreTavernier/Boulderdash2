@@ -18,6 +18,4 @@ public interface IMap {
 
 	Observable getObservable();
 
-	void setOnTheMapXY(IElement element, int x, int y);
-
 }

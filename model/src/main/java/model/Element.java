@@ -1,5 +1,5 @@
 /**
- * @author Alexandre
+ * @author Alexandre Bruno
  * @version 1.1
  */
 package model;
@@ -39,7 +39,7 @@ public abstract class Element implements IElement {
 		return this.permeability;
 	}
 	
-	protected final void setPermeability(final Permeability permeability){
+	protected void setPermeability(final Permeability permeability){
 		this.permeability = permeability;
 	}
 	

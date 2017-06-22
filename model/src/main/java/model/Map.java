@@ -47,7 +47,7 @@ public class Map extends Observable implements IMap {
 	 * @see model.IMap#getWidth()
 	 */
 	@Override
-	public int getWidth() {
+	public final int getWidth() {
 		return width;
 	}
 
@@ -55,15 +55,15 @@ public class Map extends Observable implements IMap {
 	 * @see model.IMap#getHeight()
 	 */
 	@Override
-	public int getHeight() {
+	public final int getHeight() {
 		return height;
 	}
 
-	private void setWidth(int width) {
+	private void setWidth(final int width) {
 		this.width = width;
 	}
 
-	private void setHeight(int height) {
+	private void setHeight(final int height) {
 		this.height = height;
 	}
 	
@@ -78,8 +78,8 @@ public class Map extends Observable implements IMap {
 	/* (non-Javadoc)
 	 * @see model.IMap#setOnTheMapXY(model.IElement, int, int)
 	 */
-	@Override
-	public void setOnTheMapXY(final IElement element, final int x, final int y){
+	
+	private void setOnTheMapXY(final IElement element, final int x, final int y){
 		this.onTheMap[x][y] = element;
 	}
 	

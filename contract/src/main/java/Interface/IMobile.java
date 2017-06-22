@@ -16,10 +16,12 @@ public interface IMobile extends IPawn, IElement {
 
 	void doNothing();
 
+	@Override
 	int getX();
 
 	void setX(int x);
 
+	@Override
 	int getY();
 
 	void setY(int y);
@@ -30,8 +32,7 @@ public interface IMobile extends IPawn, IElement {
 
 	Boolean isDead();
 
+	@Override
 	Point getPosition();
-
-	void setPosition(Point position);
 
 }
