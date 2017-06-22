@@ -22,5 +22,13 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<classpathentry kind="src" path="/view"/>
+	<classpathentry kind="src" path="/model"/>
+=======
+>>>>>>> 4eac72bf93676636f2a0778121d66f51c841e019
+>>>>>>> 2a4d19b841c7a5e26fb69f5c67d93453f9a0552b
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

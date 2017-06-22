@@ -14,19 +14,22 @@ public class BoulderdashModel implements IBoulderdashModel {
 	private  IMap level;
 
 	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY)
-					throws IOException {
-			this.setMyPlayer(new MyPlayer(playerStartX, playerStartY, this.getLevel()));
+		throws IOException {
+		this.setMyPlayer(new MyPlayer(playerStartX, playerStartY, this.getLevel()));
 	}
 
 	@Override
-	public IMobile getPlayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public final IMobile getPlayer() {
+			return this.myPlayer;
 	}
 
 	@Override
-	public final IRoad getLevel() {
-			return this.road;
+	public final IMap getLevel() {
+			return this.level;
+	}
+
+	private void setPlayer(final IMobile myPlayer) {
+			this.myPlayer = myPlayer;
 	}
 
 }

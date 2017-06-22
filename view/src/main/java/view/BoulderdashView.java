@@ -113,5 +113,49 @@ public class BoulderdashView implements Runnable, KeyListener {
        		this.getCloseView().y = this.getPlayer().getY() - 1;
        	}
       
+       	private IMap getMap(){
+       		return this.map;
+       	}
+       	
+       	private void setMap(final IMap map) throws IOException {
+            this.map = map;
+            for (int x = 0; x < this.getMap().getWidth(); x++) {
+                for (int y = 0; y < this.getMap().getHeight(); y++) {
+                    this.getMap().getOnTheMapXY(x, y).getSprite().loadImage();
+                }
+                
+            }
+        }
+       	
+       	private IMobile getMyVehicle(){
+       		return this.Player;
+       	}
+       	
+       	private void setPlayer(final IMobile Player){
+       		this.Player = Player;
+       		
+       	private int getView(){
+       		return this.view;
+       		
+       	private void setView(final int view){
+       		this.view = view;
+       	}
+       	
+       	private Rectangle getCloseView(){
+       		return this.closeView;
+       	}
+       	
+       	private void setCloseView(final Rectangle closeView){
+       		this.closeView = closeView;
+       	}
+       	
+       	private IOrderPerformer getOrderPerformer(){
+       		return this.orderPerformer;
+       	}
+       	
+       	public final void setOrderPerformer(final IOderPerformer orderPerformer)
+       		this.orderPerformer = orderPerformer;
+       	}
+
 	
-}
+
