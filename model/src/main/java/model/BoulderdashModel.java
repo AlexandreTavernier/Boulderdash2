@@ -19,14 +19,17 @@ public class BoulderdashModel implements IBoulderdashModel {
 	}
 
 	@Override
-	public IMobile getPlayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public final IMobile getPlayer() {
+			return this.myPlayer;
 	}
 
 	@Override
 	public final IMap getLevel() {
 			return this.level;
+	}
+
+	private void setPlayer(final IMobile myPlayer) {
+			this.myPlayer = myPlayer;
 	}
 
 }
