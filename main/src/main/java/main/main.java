@@ -5,9 +5,12 @@
 
 package main;
 
+<<<<<<< HEAD
 import model.*;
 import controller.*;
 import view.*;
+=======
+>>>>>>> 8139774f7f067b6abab61bc35cf2119ee80d8888
 
 
 public abstract class main {
