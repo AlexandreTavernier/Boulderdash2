@@ -19,13 +19,13 @@ public abstract class mainClass {
   //Intial value for the player
   private static final int startX = 5;
 
-  private static final int startY = 5;
+  private static final int startY = 0;
 
 
   public static void main(String[] args) throws IOException, InterruptedException {
 
 
-    final IBoulderdashModel model = new BoulderdashModel("C:\\Users\\taver\\git\\Boulderdash2\\scene1", startX, startY);
+    final IBoulderdashModel model = new BoulderdashModel("C:\\Users\\malor\\Documents\\GitHub\\Boulderdash2\\scene1.txt", startX, startY);
     final BoulderdashView view = new BoulderdashView(model.getMap(), model.getPlayer());
     final IBoulderdashController controller = new BoulderdashController(view, model);
 

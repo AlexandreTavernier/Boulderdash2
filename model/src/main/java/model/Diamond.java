@@ -12,7 +12,7 @@ import Interface.ISprite;
 import Interface.Permeability;
 
 public class Diamond extends Mobile {
-	private final static ISprite SPRITE = new Sprite('D',"Diamond.jpg");
+	private final static ISprite SPRITE = new Sprite('D',"diamond.jpg");
 	
 	public Diamond(final int x, final int y, ISprite sprite, final IMap map) throws IOException{
 		super(x, y, SPRITE, map, Permeability.BLOCKING);

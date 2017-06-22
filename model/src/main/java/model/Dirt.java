@@ -8,8 +8,8 @@ import Interface.ISprite;
 import Interface.Permeability;
 
 public class Dirt extends MotionlessElement {
-	private static final ISprite SPRITE = new Sprite('G', "Wall.jpg");
-
+	
+	private static final ISprite SPRITE = new Sprite('W', "wall.jpg");
 
 	Dirt(final ISprite sprite, final Permeability permeability){
 	

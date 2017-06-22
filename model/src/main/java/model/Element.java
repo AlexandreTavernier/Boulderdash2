@@ -39,7 +39,7 @@ public abstract class Element implements IElement {
 		return this.permeability;
 	}
 	
-	protected final void setPermeability(final Permeability permeabiliy){
+	protected final void setPermeability(final Permeability permeability){
 		this.permeability = permeability;
 	}
 	
