@@ -11,9 +11,9 @@ import Interface.ISprite;
 import Interface.Permeability;
 
 public class Rock extends Mobile {
-	private static final ISprite sprite = new Sprite('R', "Rock.jpg");
+	private static final ISprite SPRITE = new Sprite('R', "Rock.jpg");
 	
 	public Rock(final int x, final int y, final IMap map) throws IOException{
-		super(x, y, sprite, map, Permeability.BLOCKING);
+		super(x, y, SPRITE, map, Permeability.BLOCKING);
 	}
 }
