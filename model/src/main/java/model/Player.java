@@ -24,8 +24,8 @@ public class Player extends Mobile {
 		super(x, y, sprite, map, Permeability.BLOCKING);
 		spriteTurnLeft.loadImage();
         spriteTurnRight.loadImage();
-						spriteTurnDown.loadImage();
-								spriteTurnUp.loadImage();
+		spriteTurnDown.loadImage();
+		spriteTurnUp.loadImage();
 	}
 
 
