@@ -169,6 +169,12 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
        		this.orderPerformer = orderPerformer;
        	}
 
+		@Override
+		public void keyTyped(KeyEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
 }
 
 	
