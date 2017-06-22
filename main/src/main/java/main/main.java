@@ -5,6 +5,10 @@
 
 package main;
 
+import model.*;
+import controller.*;
+import view.*;
+
 
 
 public abstract class main {
