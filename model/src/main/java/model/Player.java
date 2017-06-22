@@ -23,12 +23,8 @@ public class Player extends Mobile {
 	public Player(final int x, final int y, final IMap map) throws IOException{
 		super(x, y, sprite, map, Permeability.BLOCKING);
 		spriteTurnLeft.loadImage();
-<<<<<<< HEAD
         spriteTurnRight.loadImage();
-=======
-    spriteTurnRight.loadImage();
->>>>>>> cc8be033f6507a5c571346ee809c5e3170457a1c
-		spriteTurnDown.loadImage();
+    	spriteTurnDown.loadImage();
 		spriteTurnUp.loadImage();
 	}
 
