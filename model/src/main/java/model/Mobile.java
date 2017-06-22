@@ -11,7 +11,7 @@ public class Mobile extends Element {
 	Mobile(final Sprite sprite, final IMap map, final Permeability permeability){
 		super(sprite, permeability);
 		this.setMap(map);
-		this.position = new Point();
+		this.position = new Point
 	}
 	
 	Mobile(final int x, final int y, final Sprite sprite, final IMap map, final Permeability permeability){
