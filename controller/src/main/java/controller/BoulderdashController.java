@@ -29,10 +29,12 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
       this.clearStackOrder();
   }
 
-
+  //play
   public final void play() throws InterruptedException {
+      //Check if the player is Alive
       while (this.getModel().getPlayer().isAlive()) {
           Thread.sleep(speed);
+          //move the player
           switch (this.getStackOrder()) {
               case RIGHT:
                   this.getModel().getPlayer().moveRight();
@@ -51,11 +53,50 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                   break;
           }
           this.clearStackOrder();
-          if (this.getModel().getPlayer().isAlive()) {
-              this.getModel().getPlayer().moveDown();
-          }
           this.getView().followPlayer();
       }
       this.getView().displayMessage("Game Over");
   }
+
+  //Get the order performe by the player to stackOrder
+  public final void orderPerform(final UserOrder userOrder) throws IOException {
+      this.setStackOrder(userOrder);
+  }
+
+  //Get view
+  private IBoulderdashView getView() {
+      return this.view;
+  }
+  //Set View
+  private void setView(final IBoulderdashView view) {
+      this.view = view;
+  }
+
+  //Get model
+  private IBoulderdashModel getModel(){
+    return this.model;
+  }
+  //Set Model
+  private void setModel(final IBoulderdashModel model) {
+      this.model = model;
+  }
+
+  //Get the stackOrder
+  private UserOrder getStackOrder() {
+      return this.stackOrder;
+  }
+  //Set stackOrder
+  private void setStackOrder(final UserOrder stackOrder) {
+      this.stackOrder = stackOrder;
+  }
+  //Clear the order
+  private void clearStackOrder() {
+      this.stackOrder = UserOrder.NOP;
+  }
+
+  //get the orderperform by the player
+  public IOrderPerformer getOrderPeformer() {
+      return this;
+  }
+
 }
