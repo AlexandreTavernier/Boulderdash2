@@ -100,7 +100,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
     		   userOrder = UserOrder.NOP;
     		   break;
     	   }
-    	   
+       }
     	 public void KeyTyped(final KeyEvent keyEvent){   
     	   	}
     	 
@@ -166,6 +166,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
        	public final void setOrderPerformer(final IOderPerformer orderPerformer) {
        		this.orderPerformer = orderPerformer;
        	}
+}
 
 	
 
