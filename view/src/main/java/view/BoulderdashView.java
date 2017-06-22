@@ -22,7 +22,7 @@ import fr.exia.showboard.BoardFrame;
 
 public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 10;
-	private static final int squareSize = 100;
+	private static final int squareSize = 50;
 	private Rectangle closeView;
 	private IMap map;
 	private IMobile Player;
@@ -64,7 +64,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
             boardFrame.addPawn(this.getPlayer());
 
             this.getMap().getObservable().addObserver(boardFrame.getObserver());
-            this.followPlayer();
+            //this.followPlayer();
 
             boardFrame.setVisible(true);
         }
@@ -122,15 +122,15 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
     	 }
        }  
         
-       @Override
+       /*@Override
        public void keyReleased(final KeyEvent keyEvent){
        		 	
-       }     
+       }   */  
        	
-       @Override
+      /* @Override
        public final void followPlayer(){
     	   this.getCloseView().y = this.getPlayer().getY() - 1;
-       }
+       }*/
       
        	private IMap getMap(){
        		return this.map;
@@ -162,9 +162,9 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
        		this.view = view;
        	}
        	
-       	private Rectangle getCloseView(){
+       /*	private Rectangle getCloseView(){
        		return this.closeView;
-       	}
+       	}*/
        	
        	private void setCloseView(final Rectangle closeView){
        		this.closeView = closeView;
@@ -180,6 +180,12 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 
 		@Override
 		public void keyTyped(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void keyReleased(KeyEvent arg0) {
 			// TODO Auto-generated method stub
 			
 		}

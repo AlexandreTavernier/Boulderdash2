@@ -63,7 +63,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                   break;
           }
           this.clearStackOrder();
-          this.getView().followPlayer();
+          //this.getView().followPlayer();
       }
       this.getView().displayMessage("Game Over");
   }

@@ -10,8 +10,6 @@ import java.awt.event.KeyEvent;
 public interface IBoulderdashView {
 	
 	void displayMessage(String message);
-	
-	void followPlayer();
 
 	void KeyTyped(KeyEvent keyEvent);
 
