@@ -1,5 +1,5 @@
 /**
- * @author Alexandre
+ * @author Alexandre & Bruno
  * @version 1.1
  */
 package view;
@@ -33,25 +33,28 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 
 	public BoulderdashView(final IMap Map, final IMobile Player) throws IOException{
 		this.setView(mapView);
-		this.setMap(map);
+		this.setMap(Map);
 		this.setPlayer(Player);
 		this.getPlayer().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getPlayer().getY(), this.getMap().getWidth(), mapView));
 		SwingUtilities.invokeLater(this);
 	}
 	
+	@Override
 	public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
 	}
-        public final void run() {
-            final BoardFrame boardFrame = new BoardFrame("Close view");
-            boardFrame.setDimension(new Dimension(this.getMap().getWidth(), this.getMap().getHeight()));
-            boardFrame.setDisplayFrame(this.closeView);
-            boardFrame.setSize(this.closeView.width * squareSize, this.closeView.height * squareSize);
-            boardFrame.setHeightLooped(true);
-            boardFrame.addKeyListener(this);
-            boardFrame.setFocusable(true);
-            boardFrame.setFocusTraversalKeysEnabled(false);
+	
+	@Override
+    public final void run() {
+    	final BoardFrame boardFrame = new BoardFrame("Close view");
+        boardFrame.setDimension(new Dimension(this.getMap().getWidth(), this.getMap().getHeight()));
+        boardFrame.setDisplayFrame(this.closeView);
+        boardFrame.setSize(this.closeView.width * squareSize, this.closeView.height * squareSize);
+        boardFrame.setHeightLooped(true);
+        boardFrame.addKeyListener(this);
+        boardFrame.setFocusable(true);
+        boardFrame.setFocusTraversalKeysEnabled(false);
 
             for (int x = 0; x < this.getMap().getWidth(); x++) {
                 for (int y = 0; y < this.getMap().getHeight(); y++) {
@@ -104,25 +107,30 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
     	 return userOrder;  
     	 
        }
-    	 public void KeyTyped(final KeyEvent keyEvent){   
-    	   	}
-    	 
-    	 public final void keyPressed(final KeyEvent keyEvent){
-    	 	try{
-    	 		this.getOrderPerformer().orderPerform(keyCodeToUserOrder(keyEvent.getKeyCode()));
-    	 	} catch (final IOException exception){
-    	 		exception.printStackTrace();
-    	 	}
-    	 }  
-        
        
-       	public void keyReleased(final KeyEvent keyEvent){
+       @Override
+       public void KeyTyped(final KeyEvent keyEvent){ 
+    		 
+       }
+    	 
+       @Override
+       public final void keyPressed(final KeyEvent keyEvent){
+    	 try{
+    		 this.getOrderPerformer().orderPerform(keyCodeToUserOrder(keyEvent.getKeyCode()));
+    	 } catch (final IOException exception){
+    		 exception.printStackTrace();
+    	 }
+       }  
+        
+       @Override
+       public void keyReleased(final KeyEvent keyEvent){
        		 	
-       	}     
+       }     
        	
-       	public final void followPlayer(){
-       		this.getCloseView().y = this.getPlayer().getY() - 1;
-       	}
+       @Override
+       public final void followPlayer(){
+    	   this.getCloseView().y = this.getPlayer().getY() - 1;
+       }
       
        	private IMap getMap(){
        		return this.map;
@@ -171,7 +179,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
        	}
 
 		@Override
-		public void keyTyped(KeyEvent arg0) {
+		public void keyTyped(KeyEvent e) {
 			// TODO Auto-generated method stub
 			
 		}

@@ -6,5 +6,6 @@ package model;
 
 public enum Permeability {
 	BLOCKING,
+	PUSH,
 	PENETRABLE;
 }

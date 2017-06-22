@@ -30,7 +30,7 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#getImage()
 	 */
-	@Override
+
 	public final Image getImage(){
 		return this.image;
 	}
@@ -38,7 +38,6 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#loadImage()
 	 */
-	@Override
 	public final void loadImage() throws IOException{
 		this.setImage(ImageIO.read(new File("C:\\Users\\malor\\Documents\\GitHub\\Boulderdash2\\Sprites\\" + this.getImageName())));
 	}
@@ -46,7 +45,6 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#getConsoleImage()
 	 */
-	@Override
 	public final char getConsoleImage(){
 		return this.consoleImage;
 	}
@@ -62,7 +60,6 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#getImageName()
 	 */
-	@Override
 	public final String getImageName(){
 		return this.imageName;
 	}
@@ -74,7 +71,6 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#isImageLoaded()
 	 */
-	@Override
 	public final boolean isImageLoaded(){
 		return this.imageLoaded;
 	}
@@ -82,7 +78,6 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#setImageLoaded(boolean)
 	 */
-	@Override
 	public final void setImageLoaded(final boolean isImageLoaded){
 		this.imageLoaded = isImageLoaded;
 	}

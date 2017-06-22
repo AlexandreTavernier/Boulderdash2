@@ -94,7 +94,6 @@ public class Mobile extends Element implements IMobile {
 	/* (non-Javadoc)
 	 * @see model.IMobile#setX(int)
 	 */
-	@Override
 	public final void setX(final int x) {
         this.getPosition().x = x;
         if (this.isDead()) {
@@ -113,7 +112,6 @@ public class Mobile extends Element implements IMobile {
     /* (non-Javadoc)
 	 * @see model.IMobile#setY(int)
 	 */
-    @Override
 	public final void setY(final int y) {
         this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
         if (this.isDead()) {
@@ -124,7 +122,6 @@ public class Mobile extends Element implements IMobile {
     /* (non-Javadoc)
 	 * @see model.IMobile#getMap()
 	 */
-    @Override
 	public IMap getMap() {
         return this.map;
         }    
@@ -148,7 +145,7 @@ public class Mobile extends Element implements IMobile {
 	 */
     @Override
 	public Boolean isDead() {
-        return ((Element) this.getMap().getOnTheMapXY(this.getX(), this.getY())).getPermeability() == Permeability.BLOCKING;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
     }
     
     /* (non-Javadoc)
@@ -162,7 +159,6 @@ public class Mobile extends Element implements IMobile {
     /* (non-Javadoc)
 	 * @see model.IMobile#setPosition(java.awt.Point)
 	 */
-    @Override
 	public void setPosition(final Point position) {
         this.position = position;
     }

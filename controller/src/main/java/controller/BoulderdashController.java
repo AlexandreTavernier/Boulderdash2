@@ -15,7 +15,7 @@ import Interface.IOrderPerformer;
 
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
   // The Constant speed.
-  private static final int speed = 2;
+  private static final int speed = 30;
 
   // The view
   private IBoulderdashView  view;
@@ -34,6 +34,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   }
 
   //play
+  @Override
   public final void play() throws InterruptedException {
       //Check if the player is Alive
       while (this.getModel().getPlayer().isAlive()) {
@@ -42,15 +43,19 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
           switch (this.getStackOrder()) {
               case RIGHT:
                   this.getModel().getPlayer().moveRight();
+                  System.out.println("Right");
                   break;
               case LEFT:
                   this.getModel().getPlayer().moveLeft();
+                  System.out.println("Left");
                   break;
               case UP:
                   this.getModel().getPlayer().moveUp();
+                  System.out.println("UP");
                   break;
               case DOWN:
                   this.getModel().getPlayer().moveDown();
+                  System.out.println("Down");
               case NOP:
               default:
                   this.getModel().getPlayer().doNothing();
@@ -62,6 +67,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
       this.getView().displayMessage("Game Over");
   }
 
+  @Override
   //Get the order performe by the player to stackOrder
   public final void orderPerform(final UserOrder userOrder) throws IOException {
       this.setStackOrder(userOrder);
@@ -99,14 +105,9 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   }
 
   //get the orderperform by the player
+  @Override
   public IOrderPerformer getOrderPeformer() {
       return this;
-  }
-
-  @Override
-  public void orderPerform(Interface.UserOrder userOrder) throws IOException {
-	  // TODO Auto-generated method stub
-	
   }
 
 }
