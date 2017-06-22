@@ -1,5 +1,7 @@
 package model;
 
+import java.io.IOException;
+
 import Interface.IMap;
 import Interface.ISprite;
 import Interface.Permeability;
@@ -14,7 +16,7 @@ public class Enemy1 extends Mobile {
 
 
   public Enemy1(final int x, final int y, final IMap map) throws IOException{
-		super(x, y, sprite, map, Permeability.BLOCKING);
+		super(x, y, SPRITE, map, Permeability.BLOCKING);
 		spriteEnemy1.loadImage();
 	}
 }
