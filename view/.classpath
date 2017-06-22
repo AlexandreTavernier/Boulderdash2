@@ -22,14 +22,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< HEAD
-	<classpathentry combineaccessrules="false" kind="src" path="/contract"/>
-	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/taver/git/Boulderdash2/showboard.doc.jar!/"/>
-		</attributes>
-	</classpathentry>
-=======
->>>>>>> 387c2ae576315d399ecff555bc33143896c0923d
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
