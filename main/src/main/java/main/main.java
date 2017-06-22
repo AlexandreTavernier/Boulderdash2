@@ -6,11 +6,10 @@
 package main;
 
 import Interface.IBoulderdashController;
-import Interface.IBoulderdashView;
 import controller.BoulderdashController;
-import controller1.*;
-import model.*;
-import view.*;
+import Interface.IBoulderdashModel;
+import model.BoulderdashModel;
+import view.BoulderdashView;
 
 
 
@@ -24,7 +23,7 @@ public abstract class main {
   public static void main(String[] args) {
 
     final IBoulderdashModel model = new BoulderdashModel("Map_1.txt", startX, startY);
-    final IBoulderdashView view = new BoulderdashView(model.getRoad(), model.getPlayer());
+    final BoulderdashView view = new BoulderdashView(model.getmap(), model.getPlayer());
     final IBoulderdashController controller = new BoulderdashController(view, model);
 
     view.setOrderPerformer(controller.getOrderPeformer());

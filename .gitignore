@@ -1,5 +1,15 @@
 
 contract/.classpath
+<<<<<<< HEAD
+contract/.classpath
+controller/.classpath
+main/.classpath
+model/.classpath
+view/.classpath
+view/.classpath
+contract/.classpath
+=======
+>>>>>>> eddd1ef8f55373610c1a43060fd133004ef93c14
 controller/.classpath
 main/.classpath
 model/.classpath
