@@ -13,12 +13,10 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 
-import fr.exia.showboard.BoardFrame;
-<<<<<<< HEAD
+
+
 import Interface.IBoulderdashView;
-=======
-import fr.exia.showboard.ISquare;
->>>>>>> 41bab14f9055f4bb76bad5d9e43cd05e641612ff
+
 import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
