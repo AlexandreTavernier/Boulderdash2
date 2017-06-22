@@ -146,6 +146,7 @@ public class Mobile extends Element implements IMobile {
     @Override
 	public Boolean isDead() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+        
     }
     
     /* (non-Javadoc)

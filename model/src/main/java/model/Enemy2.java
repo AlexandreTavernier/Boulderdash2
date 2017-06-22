@@ -16,7 +16,7 @@ public class Enemy2 extends Mobile {
 
 
   public Enemy2(final int x, final int y, final IMap map) throws IOException{
-		super(x, y, SPRITE, map, Permeability.BLOCKING);
+		super(x, y, SPRITE, map, Permeability.ENEMY);
 		SPRITE.loadImage();
 	}
 
