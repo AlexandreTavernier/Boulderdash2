@@ -7,10 +7,10 @@ package model;
 import java.awt.Image;
 
 public abstract class Element implements IElement {
-	private Sprite sprite;
+	private ISprite sprite;
 	private Permeability permeability;
 	
-	public Element(final Sprite sprite, final Permeability permeability){
+	public Element(final ISprite sprite, final Permeability permeability){
 		this.setSprite(sprite);
 		this.setPermeability(permeability);	
 	}
@@ -19,11 +19,11 @@ public abstract class Element implements IElement {
 	 * @see model.IElement#getSprite()
 	 */
 	@Override
-	public final Sprite getSprite(){
+	public final ISprite getSprite(){
 		return this.sprite;
 	}
 	
-	protected final void setSprite(final Sprite sprite){
+	protected final void setSprite(final ISprite sprite){
 		this.sprite = sprite;
 	}
 	

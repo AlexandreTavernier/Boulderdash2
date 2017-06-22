@@ -5,9 +5,9 @@
 package model;
 
 public class Wall extends MotionlessElement {
-	private static final Sprite SPRITE = new Sprite('W', "Wall.jpg");
+	private static final ISprite SPRITE = new Sprite('W', "Wall.jpg");
 
-	Wall(final int x, final int y, final IMap map){
-		super(x, y, SPRITE, map, Permeability.BLOCKING);
+	Wall(final ISprite sprite, final Permeability permeability){
+		super(SPRITE, Permeability.BLOCKING);
 	}
 }

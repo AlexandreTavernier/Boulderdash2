@@ -30,7 +30,7 @@ public class Map extends Oservable implements IMap {
 		line = buffer.readLine();
 		while (line != null){
 			for (int x = 0; x < line.toCharArray().length; x++){
-				this.setOnTheMapXY(MotionlessElementsFactory.getFromFileSymbol(line.toCharArray()[x]), x, y);
+				this.setOnTheMapXY(MotionlessElementFactory.getFromFileSymbol(line.toCharArray()[x]), x, y);
 			}
 			line = buffer.readLine();
 			y++;

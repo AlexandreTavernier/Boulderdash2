@@ -23,7 +23,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   private UserOrder stackOrder;
 
   //Instantiates a new insane vehicles controller.
-  public InsaneVehiclesController(final IBoulderdashView view, final IBoulderdashModel model) {
+  public BoulderdashController(final IBoulderdashView view, final IBoulderdashModel model) {
       this.setView(view);
       this.setModel(model);
       this.clearStackOrder();

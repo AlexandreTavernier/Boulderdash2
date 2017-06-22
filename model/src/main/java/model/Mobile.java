@@ -6,19 +6,19 @@ package model;
 
 import java.awt.Point;
 
-public class Mobile extends Element {
+public class Mobile extends Element implements IMobile {
 	private Point position;
 	private Boolean alive = true;
 	private IMap map;
 	
 	
-	Mobile(final Sprite sprite, final IMap map, final Permeability permeability){
+	Mobile(final ISprite sprite, final IMap map, final Permeability permeability){
 		super(sprite, permeability);
 		this.setMap(map);
 		this.position = new Point();
 	}
 	
-	Mobile(final int x, final int y, final Sprite sprite, final IMap map, final Permeability permeability){
+	Mobile(final int x, final int y, final ISprite sprite, final IMap map, final Permeability permeability){
 		this(sprite, map, permeability);
 		this.setX(x);
         this.setY(y);
@@ -28,26 +28,46 @@ public class Mobile extends Element {
         this.map = map;
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#moveUp()
+	 */
+	@Override
 	public void moveUp() {
         this.setY(this.getY() - 1);
         this.setHasMoved();
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#moveLeft()
+	 */
+	@Override
 	public void moveLeft() {
         this.setX(this.getX() - 1);
         this.setHasMoved();
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#moveDown()
+	 */
+	@Override
 	public void moveDown() {
         this.setY(this.getY() + 1);
         this.setHasMoved();
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#moveRight()
+	 */
+	@Override
 	public void moveRight() {
         this.setX(this.getX() + 1);
         this.setHasMoved();
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#doNothing()
+	 */
+	@Override
 	public void doNothing() {
         this.setHasMoved();
     }
@@ -56,10 +76,18 @@ public class Mobile extends Element {
     this.getMap().setMobileHasChanged();
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#getX()
+	 */
+	@Override
 	public final int getX() {
         return this.getPosition().x;
     }
 	
+	/* (non-Javadoc)
+	 * @see model.IMobile#setX(int)
+	 */
+	@Override
 	public final void setX(final int x) {
         this.getPosition().x = x;
         if (this.isDead()) {
@@ -67,18 +95,30 @@ public class Mobile extends Element {
         }
 	}    
 	
-    public final int getY() {
+    /* (non-Javadoc)
+	 * @see model.IMobile#getY()
+	 */
+    @Override
+	public final int getY() {
         return this.getPosition().y;
     }
     
-    public final void setY(final int y) {
+    /* (non-Javadoc)
+	 * @see model.IMobile#setY(int)
+	 */
+    @Override
+	public final void setY(final int y) {
         this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
         if (this.isDead()) {
             this.die();
         }
     }    
         
-    public IMap getMap() {
+    /* (non-Javadoc)
+	 * @see model.IMobile#getMap()
+	 */
+    @Override
+	public IMap getMap() {
         return this.map;
         }    
     
@@ -86,7 +126,11 @@ public class Mobile extends Element {
         this.map = road;
     }
 
-    public Boolean isAlive() {
+    /* (non-Javadoc)
+	 * @see model.IMobile#isAlive()
+	 */
+    @Override
+	public Boolean isAlive() {
         return this.alive;
     }
     
@@ -95,15 +139,27 @@ public class Mobile extends Element {
         this.setHasMoved();
     }
     
-    public Boolean isDead() {
+    /* (non-Javadoc)
+	 * @see model.IMobile#isDead()
+	 */
+    @Override
+	public Boolean isDead() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
     }
     
-    public Point getPosition() {
+    /* (non-Javadoc)
+	 * @see model.IMobile#getPosition()
+	 */
+    @Override
+	public Point getPosition() {
         return this.position;
     }
         
-    public void setPosition(final Point position) {
+    /* (non-Javadoc)
+	 * @see model.IMobile#setPosition(java.awt.Point)
+	 */
+    @Override
+	public void setPosition(final Point position) {
         this.position = position;
     }
 

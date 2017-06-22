@@ -17,7 +17,7 @@ import model.IMobile;
 import controller.IOrderPerformer;
 import controller.UserOrder;
 
-public class BoulderdashView implements Runnable, KeyListener {
+public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 10;
 	private static final int squareSize = 100;
 	private Rectangle closeView;
@@ -137,9 +137,11 @@ public class BoulderdashView implements Runnable, KeyListener {
        	
        	private void setPlayer(final IMobile Player){
        		this.Player = Player;
+       	}
        		
        	private int getView(){
        		return this.view;
+       	}
        		
        	private void setView(final int view){
        		this.view = view;

@@ -5,9 +5,9 @@
 package model;
 
 public class Dirt extends MotionlessElement {
-	private static final Sprite SPRITE = new Sprite ('B', "Dirt.jpg");
+	private static final ISprite SPRITE = new Sprite('W', "Wall.jpg");
 
-	Dirt(final int x, final int y, Sprite sprite, final IMap map) throws IOException){
+	Dirt(final ISprite sprite, final Permeability permeability){
 		super(SPRITE, Permeability.BLOCKING);
 	}
 }

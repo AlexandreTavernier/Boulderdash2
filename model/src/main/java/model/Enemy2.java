@@ -6,7 +6,7 @@ package model;
  */
 
 public class Enemy2 extends Mobile {
-  private static final Sprite spriteEnemy2 = new Sprite('2', "enemy2.jpg");
+  private static final ISprite spriteEnemy2 = new Sprite('2', "enemy2.jpg");
 
 
   public Enemy2(final int x, final int y, final IMap map) throws IOException{

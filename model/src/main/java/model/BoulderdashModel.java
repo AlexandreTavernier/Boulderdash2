@@ -10,19 +10,19 @@ import java.io.IOException;
 public class BoulderdashModel implements IBoulderdashModel {
 
 	//The player
-	private IMobile myPlayer;
+	private IMobile Player;
 
 	//The level
 	private  IMap level;
 
 	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY) throws IOException {
 		this.setLevel(new Map(fileName));
-		this.setMyPlayer(new MyPlayer(playerStartX, playerStartY, this.getLevel()));
+		this.setPlayer(new Player(playerStartX, playerStartY, this.getLevel()));
 	}
 
 	@Override
 	public final IMobile getPlayer() {
-			return this.myPlayer;
+			return this.Player;
 	}
 
 	@Override
@@ -30,8 +30,8 @@ public class BoulderdashModel implements IBoulderdashModel {
 		return this.level;
 	}
 
-	private void setPlayer(final IMobile myPlayer) {
-		this.myPlayer = myPlayer;
+	private void setPlayer(final IMobile Player) {
+		this.Player = Player;
 	}
 
 }
