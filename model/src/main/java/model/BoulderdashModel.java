@@ -1,5 +1,7 @@
 package model;
 
+import java.io.IOException;
+
 /**
  * @author Bruno
  * @version 1
@@ -13,8 +15,8 @@ public class BoulderdashModel implements IBoulderdashModel {
 	//The level
 	private  IMap level;
 
-	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY)
-		throws IOException {
+	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY) throws IOException {
+		this.setLevel(new Map(fileName));
 		this.setMyPlayer(new MyPlayer(playerStartX, playerStartY, this.getLevel()));
 	}
 
@@ -25,11 +27,11 @@ public class BoulderdashModel implements IBoulderdashModel {
 
 	@Override
 	public final IMap getLevel() {
-			return this.level;
+		return this.level;
 	}
 
 	private void setPlayer(final IMobile myPlayer) {
-			this.myPlayer = myPlayer;
+		this.myPlayer = myPlayer;
 	}
 
 }
