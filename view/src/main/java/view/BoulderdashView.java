@@ -34,7 +34,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	public BoulderdashView(final IMap map, final IMobile Player) throws IOException{
 		this.setView(mapView);
 		this.setMap(map);
-		this.setPlayer(player);
+		this.setPlayer(Player);
 		this.getPlayer().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getPlayer().getY(), this.getMap.getWidth(), mapView));
 		SwingUtilities.invokeLater(this);
