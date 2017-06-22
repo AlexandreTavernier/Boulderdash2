@@ -14,6 +14,7 @@ import javax.swing.SwingUtilities;
 
 
 import fr.exia.showboard.BoardFrame;
+import Interface.IBoulderdashView;
 import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
@@ -72,7 +73,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
         			if((x == this.getPlayer().getX()) && (y == yStart)){
         				System.out.print(this.getPlayer().getSprite().getConsoleImage());
         			}else{
-        				System.out.print(this.getMap().getOnTheMap(x, y).getSprite().getConsoleImage());
+        				System.out.print(this.getMap().getOnTheMapXY(x, y).getSprite().getConsoleImage());
         			}
         		}
         		y = (y+ 1) % this.getMap().getHeight();
