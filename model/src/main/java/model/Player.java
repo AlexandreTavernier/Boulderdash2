@@ -2,7 +2,7 @@ package model;
 
 /**
  * @author Alexandre
- * @version 1
+ * @version 1.1
  */
 
 import java.io.IOException;

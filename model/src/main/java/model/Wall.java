@@ -1,3 +1,7 @@
+/**
+ * @author Alexandre
+ * @version 1.1
+ */
 package model;
 
 public class Wall extends MotionlessElement {

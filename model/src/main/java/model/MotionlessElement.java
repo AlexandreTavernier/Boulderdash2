@@ -1,3 +1,7 @@
+/**
+ * @author Alexandre
+ * @version 1
+ */
 package model;
 
 public class MotionlessElement extends Element {

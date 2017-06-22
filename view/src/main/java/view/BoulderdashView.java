@@ -1,3 +1,7 @@
+/**
+ * @author Alexandre
+ * @version 1.1
+ */
 package view;
 
 import java.awt.Dimension;

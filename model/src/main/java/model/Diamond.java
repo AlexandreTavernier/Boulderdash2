@@ -1,3 +1,8 @@
+/**
+ * @author Alexandre
+ * @version 1.1
+ */
+
 package model;
 
 import java.io.IOException;
