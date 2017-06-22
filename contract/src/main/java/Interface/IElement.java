@@ -6,13 +6,15 @@ package Interface;
 
 import java.awt.Image;
 
+import fr.exia.showboard.ISquare;
 
-public interface IElement {
+
+public interface IElement extends ISquare {
 
 	ISprite getSprite();
 
 	Permeability getPermeability();
-
+	
 	Image getImage();
 
 }

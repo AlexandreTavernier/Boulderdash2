@@ -29,6 +29,8 @@ public class Map extends Observable implements IMap {
 		int y = 0;
 		line = buffer.readLine();
 		this.setWidth(Integer.parseInt(line));
+		line = buffer.readLine();
+		this.setHeight(Integer.parseInt(line));
 		this.onTheMap = new IElement[this.getWidth()][this.getHeight()];
 		line = buffer.readLine();
 		while (line != null){

@@ -2,7 +2,9 @@ package Interface;
 
 import java.awt.Point;
 
-public interface IMobile {
+import fr.exia.showboard.IPawn;
+
+public interface IMobile extends IPawn, IElement {
 
 	void moveUp();
 

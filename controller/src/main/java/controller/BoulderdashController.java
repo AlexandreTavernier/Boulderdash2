@@ -11,8 +11,6 @@ import Interface.IBoulderdashController;
 import Interface.IBoulderdashModel;
 import Interface.IBoulderdashView;
 import Interface.IOrderPerformer;
-import view.*;
-import model.*;
 
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
   // The Constant speed.
@@ -102,6 +100,12 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   //get the orderperform by the player
   public IOrderPerformer getOrderPeformer() {
       return this;
+  }
+
+  @Override
+  public void orderPerform(Interface.UserOrder userOrder) throws IOException {
+	  // TODO Auto-generated method stub
+	
   }
 
 }
