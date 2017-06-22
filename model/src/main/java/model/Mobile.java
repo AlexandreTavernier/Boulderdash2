@@ -127,10 +127,7 @@ public class Mobile extends Element implements IMobile {
         return this.map;
         }    
     
-    private void setRoad(final IMap road) {
-        this.map = road;
-    }
-
+  
     /* (non-Javadoc)
 	 * @see model.IMobile#isAlive()
 	 */
