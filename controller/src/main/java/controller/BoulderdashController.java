@@ -11,6 +11,7 @@ import Interface.IBoulderdashController;
 import Interface.IBoulderdashModel;
 import Interface.IBoulderdashView;
 import Interface.IOrderPerformer;
+import Interface.UserOrder;
 
 
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {

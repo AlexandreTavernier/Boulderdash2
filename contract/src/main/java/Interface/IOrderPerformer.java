@@ -6,7 +6,7 @@ package Interface;
 
 import java.io.IOException;
 
-import controller.UserOrder;
+import Interface.UserOrder;
 
 public interface IOrderPerformer {
 	
