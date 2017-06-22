@@ -12,6 +12,10 @@ public class Dirt extends MotionlessElement {
 
 
 	Dirt(final ISprite sprite, final Permeability permeability){
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 387c2ae576315d399ecff555bc33143896c0923d
 		super(SPRITE, Permeability.BLOCKING);
 	}
 }
