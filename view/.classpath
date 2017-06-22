@@ -23,10 +23,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="/model"/>
-	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar">
+	<classpathentry kind="lib" path="C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/taver/git/Boulderdash2/showboard.doc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.doc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/controller"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
