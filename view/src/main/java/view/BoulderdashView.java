@@ -2,14 +2,16 @@ package view;
 
 import java.awt.Dimension;
 import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-
+import fr.exia.showboard.BoardFrame;
 import model.IMap;
 import model.IMobile;
-
+import controller.IOrderPerformer;
+import controller.UserOrder;
 
 public class BoulderdashView implements Runnable, KeyListener {
 	private static final int mapView = 10;
@@ -33,7 +35,7 @@ public class BoulderdashView implements Runnable, KeyListener {
 	
 	public final void displayMessage(final String message) {
         JOptionPane.showMessageDialog(null, message);
-     
+	}
         public final void run() {
             final BoardFrame boardFrame = new BoardFrame("Close view");
             boardFrame.setDimension(new Dimension(this.getmap().getWidth(), this.getmap().getHeight()));
@@ -56,6 +58,60 @@ public class BoulderdashView implements Runnable, KeyListener {
 
             boardFrame.setVisible(true);
         }
+        
+        public final void show(final int yStart){
+        	int y = yStart % this.getMap().getHeight();
+        	for (int view = 0; view < this.getView(); view++){
+        		for(int x = 0; x < this.getMap().getWidth(); x++){
+        			if((x == this.getPlayer().getX()) && (y == yStart)){
+        				System.out.print(this.getPlayer().getSprite().getConsoleImage());
+        			}else{
+        				System.out.print(this.getMap().getOnTheMap(x, y).getSprite().getConsoleImage());
+        			}
+        		}
+        		y = (y+ 1) % this.getMap().getHeight();
+        		System.out.print("\n");
+        	}
+       
+       private static UserOrder keyCodeToUserOrder(final int keyCode){
+    	   UserOrder userOrder;
+    	   switch (keyCode){
+    	   case KeyEvent.VK_RIGHT;
+    	   		userOrder = UserOder.RIGHT;
+    	   		break;
+    	   case KeyEvent.VK_0.LEFT;
+    	   		userOrder = UserOrder.LEFT;
+    	   		break;
+    	   case KeyEvent.VK_UP;
+    	   		userOrder = UserOrder.UP;
+    	   		break;
+    	   caseKeyEvent.VK_DOWN;
+    	   		userOder = UserOrder.DOWN;
+    	   		break;
+    	   default:
+    		   userOrder = UserOrder.NOP
+    		   break;
+    	   }
+    	   
+    	 public void KeyTyped(final KeyEvent keyEvent){   
+    	   	}
+    	 
+    	 public final void keyPressed(final KeyEvent keyEvent){
+    	 	try{
+    	 		this.getOrderPerformer().orderPerform(keycodeToUserOrder(keyEvent.getKeyCode()))
+    	 	} catch (final IOException exception){
+    	 		exception.printStackTrace();
+    	 	}
+    	 }  
+        
+       
+       	public void keyReleased(final KeyEvent keyEvent){
+       		 	
+       	}     
+       	
+       	public final void followPlayer(){
+       		this.getCloseView().y = this.getPlayer().getY() - 1;
+       	}
       
 	
 }
