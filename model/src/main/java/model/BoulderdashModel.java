@@ -3,6 +3,7 @@ package model;
 import java.io.IOException;
 import Interface.IMap;
 import Interface.IMobile;
+import Interface.IBoulderdashModel;
 
 /**
  * @author Bruno

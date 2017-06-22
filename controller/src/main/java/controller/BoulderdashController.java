@@ -11,10 +11,7 @@ import Interface.IBoulderdashController;
 import Interface.IBoulderdashModel;
 import Interface.IBoulderdashView;
 import Interface.IOrderPerformer;
-<<<<<<< HEAD
 
-=======
->>>>>>> dfa6a997728571dad3dab557f82ee1cefb088ae8
 
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
   // The Constant speed.

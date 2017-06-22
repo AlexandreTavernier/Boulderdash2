@@ -100,12 +100,9 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
     		   userOrder = UserOrder.NOP;
     		   break;
     	   }
-<<<<<<< HEAD
-    	   
-=======
+
     	 return userOrder;  
     	 
->>>>>>> dfa6a997728571dad3dab557f82ee1cefb088ae8
        }
     	 public void KeyTyped(final KeyEvent keyEvent){   
     	   	}
