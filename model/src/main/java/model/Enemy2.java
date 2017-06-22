@@ -1,5 +1,7 @@
 package model;
 
+import java.io.IOException;
+
 import Interface.IMap;
 import Interface.ISprite;
 import Interface.Permeability;
