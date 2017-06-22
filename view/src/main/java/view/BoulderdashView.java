@@ -12,15 +12,14 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
-import Interface.IBoulderdashView;
-import fr.exia.showboard.BoardFrame;
 
+import fr.exia.showboard.BoardFrame;
 import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
 import Interface.UserOrder;
 
-public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView {
+public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener {
 	private static final int mapView = 10;
 	private static final int squareSize = 100;
 	private Rectangle closeView;
