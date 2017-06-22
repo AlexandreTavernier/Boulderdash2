@@ -20,7 +20,7 @@ public class BoulderdashModel implements IBoulderdashModel {
 	private  IMap level;
 
 	public BoulderdashModel(final String fileName, final int playerStartX, final int playerStartY) throws IOException {
-		this.setLevel(new Map(fileName));
+		this.setlevel(new Map(fileName));
 		this.setPlayer(new Player(playerStartX, playerStartY, this.getLevel()));
 	}
 
