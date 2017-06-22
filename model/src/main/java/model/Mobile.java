@@ -40,7 +40,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveUp() {
-		if(this.getY() == 0){
+		if(this.getY() == 1){
 			this.setY(this.getY());
 		}else{
 			this.setY(this.getY() - 1);
@@ -53,7 +53,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveLeft() {
-		if(this.getX() == 0){
+		if(this.getX() == 1){
 			this.setX(this.getX());
 		}else{
 			this.setX(this.getX() - 1);
@@ -66,7 +66,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveDown() {
-		if(this.getY() == 9){
+		if(this.getY() == 8){
 			this.setY(this.getY());
 		}else{
 			this.setY(this.getY() + 1);
@@ -79,7 +79,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveRight() {
-		if (this.getX() == 9){
+		if (this.getX() == 8){
 			this.setX(this.getX());
 		}
 		else {
@@ -116,7 +116,7 @@ public class Mobile extends Element implements IMobile {
         this.getPosition().x = x;
         if (this.isDead()) {
         	System.out.println("Dead");
-            this.die();
+            //this.die();
         }
 	}    
 	
