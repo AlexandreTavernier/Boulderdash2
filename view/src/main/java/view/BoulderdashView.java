@@ -21,6 +21,7 @@ import Interface.IMap;
 import Interface.IMobile;
 import Interface.IOrderPerformer;
 import Interface.UserOrder;
+import fr.exia.showboard.BoardFrame;
 
 public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener {
 	private static final int mapView = 10;
@@ -102,6 +103,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
     		   userOrder = UserOrder.NOP;
     		   break;
     	   }
+    	   
        }
     	 public void KeyTyped(final KeyEvent keyEvent){   
     	   	}
@@ -137,7 +139,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
             }
         }
        	
-       	private IMobile getMyVehicle(){
+       	private IMobile getPlayer(){
        		return this.Player;
        	}
        	
