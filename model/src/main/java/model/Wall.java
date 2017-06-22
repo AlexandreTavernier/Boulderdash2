@@ -9,7 +9,7 @@ import Interface.Permeability;
 
 public class Wall extends MotionlessElement {
 	
-	private static final ISprite SPRITE = new Sprite('W', "Wall.jpg");
+	private static final ISprite SPRITE = new Sprite('W', "wall.jpg");
 
 	Wall(){
 		super(SPRITE, Permeability.BLOCKING);
