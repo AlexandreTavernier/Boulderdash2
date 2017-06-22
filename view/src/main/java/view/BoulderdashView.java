@@ -35,7 +35,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
 		this.setMap(map);
 		this.setPlayer(Player);
 		this.getPlayer().getSprite().loadImage();
-		this.setCloseView(new Rectangle(0, this.getPlayer().getY(), this.getMap.getWidth(), mapView));
+		this.setCloseView(new Rectangle(0, this.getPlayer().getY(), this.getMap().getWidth(), mapView));
 		SwingUtilities.invokeLater(this);
 	}
 	
@@ -52,14 +52,14 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
             boardFrame.setFocusable(true);
             boardFrame.setFocusTraversalKeysEnabled(false);
 
-            for (int x = 0; x < this.getmap().getWidth(); x++) {
-                for (int y = 0; y < this.getmap().getHeight(); y++) {
-                    boardFrame.addSquare(this.map.getOnThemapXY(x, y), x, y);
+            for (int x = 0; x < this.getMap().getWidth(); x++) {
+                for (int y = 0; y < this.getMap().getHeight(); y++) {
+                    boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
                 }
             }
             boardFrame.addPawn(this.getPlayer());
 
-            this.getmap().getObservable().addObserver(boardFrame.getObserver());
+            this.getMap().getObservable().addObserver(boardFrame.getObserver());
             this.followPlayer();
 
             boardFrame.setVisible(true);
@@ -82,20 +82,20 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
        private static UserOrder keyCodeToUserOrder(final int keyCode){
     	   UserOrder userOrder;
     	   switch (keyCode){
-    	   case KeyEvent.VK_RIGHT;
-    	   		userOrder = UserOder.RIGHT;
+    	   case KeyEvent.VK_RIGHT :
+    	   		userOrder = UserOrder.RIGHT;
     	   		break;
-    	   case KeyEvent.VK_0.LEFT;
+    	   case KeyEvent.VK_LEFT :
     	   		userOrder = UserOrder.LEFT;
     	   		break;
-    	   case KeyEvent.VK_UP;
+    	   case KeyEvent.VK_UP :
     	   		userOrder = UserOrder.UP;
     	   		break;
-    	   caseKeyEvent.VK_DOWN;
-    	   		userOder = UserOrder.DOWN;
+    	   case KeyEvent.VK_DOWN :
+    	   		userOrder = UserOrder.DOWN;
     	   		break;
     	   default:
-    		   userOrder = UserOrder.NOP
+    		   userOrder = UserOrder.NOP;
     		   break;
     	   }
     	   
@@ -104,7 +104,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
     	 
     	 public final void keyPressed(final KeyEvent keyEvent){
     	 	try{
-    	 		this.getOrderPerformer().orderPerform(keycodeToUserOrder(keyEvent.getKeyCode()))
+    	 		this.getOrderPerformer().orderPerform(keyCodeToUserOrder(keyEvent.getKeyCode()))
     	 	} catch (final IOException exception){
     	 		exception.printStackTrace();
     	 	}
@@ -161,7 +161,7 @@ public class BoulderdashView implements IBoulderdashView, Runnable, KeyListener 
        		return this.orderPerformer;
        	}
        	
-       	public final void setOrderPerformer(final IOderPerformer orderPerformer)
+       	public final void setOrderPerformer(final IOderPerformer orderPerformer) {
        		this.orderPerformer = orderPerformer;
        	}
 
