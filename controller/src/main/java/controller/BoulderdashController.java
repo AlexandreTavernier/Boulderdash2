@@ -34,7 +34,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
       //Check if the player is Alive
       while (this.getModel().getPlayer().isAlive()) {
           Thread.sleep(speed);
-          //move the player 
+          //move the player
           switch (this.getStackOrder()) {
               case RIGHT:
                   this.getModel().getPlayer().moveRight();
@@ -53,14 +53,12 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                   break;
           }
           this.clearStackOrder();
-          if (this.getModel().getPlayer().isAlive()) {
-              this.getModel().getPlayer().moveDown();
-          }
           this.getView().followPlayer();
       }
       this.getView().displayMessage("Game Over");
   }
 
+  //Get the order performe by the player to stackOrder
   public final void orderPerform(final UserOrder userOrder) throws IOException {
       this.setStackOrder(userOrder);
   }
