@@ -16,7 +16,7 @@ import Interface.UserOrder;
 
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
   // The Constant speed.
-  private static final int speed = 30;
+  private static final int speed = 60;
 
   // The view
   private IBoulderdashView  view;
@@ -63,7 +63,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                   break;
           }
           this.clearStackOrder();
-          this.getView().followPlayer();
+          //this.getView().followPlayer();
       }
       this.getView().displayMessage("Game Over");
   }

@@ -17,9 +17,9 @@ import view.BoulderdashView;
 
 public abstract class mainClass {
   //Intial value for the player
-  private static final int startX = 2;
+  private static final int startX = 5;
 
-  private static final int startY = 2;
+  private static final int startY = 0;
 
 
   public static void main(String[] args) throws IOException, InterruptedException {
