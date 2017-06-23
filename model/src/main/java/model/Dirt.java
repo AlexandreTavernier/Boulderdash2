@@ -10,19 +10,11 @@ import Interface.Permeability;
 public class Dirt extends MotionlessElement {
 	
 	private static final ISprite SPRITE = new Sprite('G', "dirt.jpg");
-	private static final ISprite SPRITEAIR = new Sprite('A', "dirt_air.jpg");
+	private static final ISprite AIRSPRITE = new Sprite('G', "air.jpg");
+
+	Dirt(){
 	
-	public Dirt(){
-		super(setDirt(), Permeability.DIG);
-	}
-	
-	public static ISprite setDirt(){
-		if (Mobile.getDig() == false){
-			return SPRITE;
-		}else if (Mobile.getDig() == true){
-			return SPRITEAIR;
-		}
-		
-		return SPRITE;
+		super(SPRITE,Permeability.BLOCKING);
 	}
 }
+
