@@ -4,16 +4,13 @@
  */
 package model;
 
-import java.io.IOException;
-
-import Interface.IMap;
 import Interface.ISprite;
 import Interface.Permeability;
 
-public class Rock extends Mobile {
+public class Rock extends MotionlessElement {
 	private static final ISprite SPRITE = new Sprite('R', "boulder.jpg");
 
-	public Rock(final int x, final int y, final IMap map) throws IOException{
-		super(x, y, SPRITE, map, Permeability.PUSH);
+	public Rock(){
+		super(SPRITE,Permeability.PUSH);
 	}
 }
