@@ -22,7 +22,7 @@ public class Map extends Observable implements IMap {
 		super();
 		this.loadFile(fileName);
 	}
-	
+	//Take name in main, for read and send to view, for display
 	private void loadFile(final String fileName) throws IOException{
 		final BufferedReader buffer = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 		String line;
@@ -47,6 +47,7 @@ public class Map extends Observable implements IMap {
 	 * @see model.IMap#getWidth()
 	 */
 	@Override
+	//Setup Width
 	public final int getWidth() {
 		return width;
 	}
@@ -55,14 +56,15 @@ public class Map extends Observable implements IMap {
 	 * @see model.IMap#getHeight()
 	 */
 	@Override
+	//Setup Height
 	public final int getHeight() {
 		return height;
 	}
-
+	//setWidth
 	private void setWidth(final int width) {
 		this.width = width;
 	}
-
+	//SetHeight
 	private void setHeight(final int height) {
 		this.height = height;
 	}

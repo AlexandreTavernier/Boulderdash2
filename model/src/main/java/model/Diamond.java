@@ -10,7 +10,7 @@ import Interface.Permeability;
 
 public class Diamond extends MotionlessElement{
 	private final static ISprite SPRITE = new Sprite('D',"diamond.jpg");
-
+	//Take sprite for diamond
 	public Diamond(){
 		super(SPRITE,Permeability.TAKE);
 	}
