@@ -27,16 +27,16 @@ public class BoulderdashModel implements IBoulderdashModel {
 	public final IMobile getPlayer() {
 			return this.Player;
 	}
-	
+	//Select level
 	private void setMap(final IMap map){
 		this.level = map;
 	}
-
+	//Get variable Map
 	@Override
 	public final IMap getMap() {
 		return this.level;
 	}
-
+	//Setup the player
 	private void setPlayer(final IMobile Player) {
 		this.Player = Player;
 	}

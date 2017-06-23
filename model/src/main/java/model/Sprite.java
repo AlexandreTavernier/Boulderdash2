@@ -38,8 +38,9 @@ public class Sprite implements ISprite {
 	/* (non-Javadoc)
 	 * @see model.ISprite#loadImage()
 	 */
+	//find sprite, for loading
 	public final void loadImage() throws IOException{
-		this.setImage(ImageIO.read(new File("C:\\Users\\taver\\git\\Boulderdash2\\Sprites\\" + this.getImageName())));
+		this.setImage(ImageIO.read(new File("C:/Users/malor/Documents/GitHub/Boulderdash2/Sprites/" + this.getImageName())));
 	}
 	
 	/* (non-Javadoc)

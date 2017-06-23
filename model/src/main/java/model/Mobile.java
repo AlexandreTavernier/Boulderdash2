@@ -16,7 +16,7 @@ public class Mobile extends Element implements IMobile {
 	private static final int SCOREMAX = 1;
 	
 	private Boolean win = false;
-	private Boolean isDig = false;
+	private static Boolean isDig = false;
 	
 	private Point position;
 	private Boolean alive = true;
@@ -46,10 +46,12 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveUp()
 	 */
 	@Override
+	//Operator use for move Up
 	public void moveUp() {
 		if(this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
 		}
+
 		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DIG){
 			this.setY(this.getY() - 1);
 		}else if (this.getY() == 0){
@@ -65,6 +67,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveLeft()
 	 */
 	@Override
+	//Operator use for move Left
 	public void moveLeft() {
 		if(this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
@@ -81,6 +84,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveDown()
 	 */
 	@Override
+	//Operator use for move Down
 	public void moveDown() {
 		if (this.getMap().getOnTheMapXY(this.getX(), this.getY() + 1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
@@ -97,6 +101,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveRight()
 	 */
 	@Override
+	//Operator use for move Right
 	public void moveRight() {
 		if (this.getMap().getOnTheMapXY(this.getX() + 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
@@ -227,11 +232,11 @@ public class Mobile extends Element implements IMobile {
         return this.board;
     }
 
-	public Boolean getIsDig() {
+	public static Boolean getIsDig() {
 		return isDig;
 	}
 
-	public void setIsDig(Boolean isDig) {
-		this.isDig = isDig;
+	public static void setIsDig(Boolean Dig) {
+		isDig = Dig;
 	}
 }

@@ -9,7 +9,7 @@ import Interface.Permeability;
 
 public class Door extends MotionlessElement {
 	private static final ISprite SPRITE = new Sprite('E', "door.jpg");
-
+	//Take sprite for Door
 	Door(){
 		super(SPRITE, Permeability.EXIT);
 	}
