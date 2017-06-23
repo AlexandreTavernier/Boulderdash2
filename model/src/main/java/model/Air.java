@@ -8,7 +8,7 @@ import Interface.ISprite;
 import Interface.Permeability;
 
 public class Air extends MotionlessElement {
-	private static final ISprite SPRITE = new Sprite (' ', "dirt_dig.jpg");
+	private static final ISprite SPRITE = new Sprite ('A', "dirt_dig.jpg");
 
 	Air(){
 		super(SPRITE, Permeability.PENETRABLE);
