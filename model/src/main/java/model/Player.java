@@ -63,9 +63,5 @@ public class Player extends Mobile {
 	public final void take() {
 		
 	}
-	
-	public final void win(){
-		
-	}
 
 }
