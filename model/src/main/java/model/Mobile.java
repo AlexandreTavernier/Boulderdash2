@@ -13,6 +13,9 @@ import Interface.Permeability;
 import fr.exia.showboard.IBoard;
 
 public class Mobile extends Element implements IMobile {
+	private static final int SCOREMAX = 1;
+	private Boolean win = false;
+	
 	private Point position;
 	private Boolean alive = true;
 	private IMap map;
@@ -118,6 +121,9 @@ public class Mobile extends Element implements IMobile {
         	System.out.println("Dead");
             //this.die();
         }
+        if(this.asWon()){
+        	System.out.println("Won");
+        }
 	}    
 	
     /* (non-Javadoc)
@@ -136,6 +142,9 @@ public class Mobile extends Element implements IMobile {
         if (this.isDead()) {
             this.die();
         }
+        if(this.asWon()){
+        	System.out.println("Won");
+        }
     }    
         
     /* (non-Javadoc)
@@ -150,7 +159,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#isAlive()
 	 */
     @Override
-	public Boolean isAlive() {
+	public boolean isAlive() {
         return this.alive;
     }
     
@@ -164,8 +173,20 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#isDead()
 	 */
     @Override
-	public Boolean isDead() {
+	public boolean isDead() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+    }
+    
+    public boolean asWon() {
+    	if (Player.SCORE == SCOREMAX ){
+    		return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.EXIT;
+    	}
+		return win;
+    }
+    
+    protected void win(){
+    	this.win = true;
+    	this.setHasMoved();
     }
     
     /* (non-Javadoc)

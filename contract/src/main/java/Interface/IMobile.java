@@ -28,11 +28,13 @@ public interface IMobile extends IPawn, IElement {
 
 	IMap getMap();
 
-	Boolean isAlive();
+	boolean isAlive();
 
-	Boolean isDead();
+	boolean isDead();
 
 	@Override
 	Point getPosition();
+
+	boolean asWon();
 
 }

@@ -38,34 +38,47 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   @Override
   public final void play() throws InterruptedException {
       //Check if the player is Alive
-      while (this.getModel().getPlayer().isAlive()) {
-          Thread.sleep(speed);
-          //move the player
-          switch (this.getStackOrder()) {
-              case RIGHT:
-                  this.getModel().getPlayer().moveRight();
-                  System.out.println("Right");
-                  break;
-              case LEFT:
-                  this.getModel().getPlayer().moveLeft();
-                  System.out.println("Left");
-                  break;
-              case UP:
-                  this.getModel().getPlayer().moveUp();
-                  System.out.println("UP");
-                  break;
-              case DOWN:
-                  this.getModel().getPlayer().moveDown();
-                  System.out.println("Down");
-              case NOP:
-              default:
-                  this.getModel().getPlayer().doNothing();
-                  break;
-          }
-          this.clearStackOrder();
-          //this.getView().followPlayer();
-      }
-      this.getView().displayMessage("Game Over");
+		  while (this.getModel().getPlayer().isAlive()) {
+			  while (!this.getModel().getPlayer().asWon()){
+	          Thread.sleep(speed);
+	          //move the player
+	          switch (this.getStackOrder()) {
+	              case RIGHT:
+	                  this.getModel().getPlayer().moveRight();
+	                  System.out.println("Right");
+	                  break;
+	              case LEFT:
+	                  this.getModel().getPlayer().moveLeft();
+	                  System.out.println("Left");
+	                  break;
+	              case UP:
+	                  this.getModel().getPlayer().moveUp();
+	                  System.out.println("UP");
+	                  break;
+	              case DOWN:
+	                  this.getModel().getPlayer().moveDown();
+	                  System.out.println("Down");
+	              case NOP:
+	              default:
+	                  this.getModel().getPlayer().doNothing();
+	                  break;
+	          }
+	          this.clearStackOrder();
+	          //this.getView().followPlayer();
+	          
+	      }
+		  
+	      this.getView().displayMessage("You Win!");
+	      
+	      break;
+	  }
+	if (this.getModel().getPlayer().isAlive() && this.getModel().getPlayer().asWon()){ 
+	}
+	else{
+		this.getView().displayMessage("Game Over");
+	}
+	
+     
   }
 
   @Override

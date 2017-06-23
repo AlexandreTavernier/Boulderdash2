@@ -11,6 +11,6 @@ public class Door extends MotionlessElement {
 	private static final ISprite SPRITE = new Sprite('E', "door.jpg");
 
 	Door(){
-		super(SPRITE, Permeability.PENETRABLE);
+		super(SPRITE, Permeability.EXIT);
 	}
 }
