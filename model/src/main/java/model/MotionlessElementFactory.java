@@ -8,10 +8,16 @@ public abstract class MotionlessElementFactory  {
 	private static final MotionlessElement WALL = new Wall();
 	
 	private static final MotionlessElement AIR = new Air();
+	
+	private static final MotionlessElement DIRT = new Dirt();
+	
+	private static final MotionlessElement DOOR = new Door();
 
 	private static MotionlessElement[] motionlessElements = {
 		  WALL,
 		  AIR,
+		  DIRT,
+		  DOOR,
 	};
 	
 	public static MotionlessElement createWall() {
@@ -20,6 +26,14 @@ public abstract class MotionlessElementFactory  {
 	
 	public static MotionlessElement createAir(){
 		return AIR;
+	}
+	
+	public static MotionlessElement createDirt(){
+		return DIRT;
+	}
+	
+	public static MotionlessElement createDoor(){
+		return DOOR;
 	}
 	
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) 

@@ -11,7 +11,7 @@ public class Dirt extends MotionlessElement {
 	
 	private static final ISprite SPRITE = new Sprite('G', "dirt.jpg");
 
-	Dirt(final ISprite sprite, final Permeability permeability){
+	Dirt(){
 	
 		super(SPRITE, Permeability.BLOCKING);
 	}
