@@ -12,6 +12,6 @@ public class Wall extends MotionlessElement {
 	private static final ISprite SPRITE = new Sprite('W', "wall.jpg");
 
 	Wall(){
-		super(SPRITE, Permeability.PLAYER);
+		super(SPRITE, Permeability.BLOCKING);
 	}
 }

@@ -43,9 +43,12 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveUp() {
-		if(this.getY() == 1){
+		if(this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
-		}else{
+		}else if (this.getY() == 0){
+			this.setY(this.getY());
+		}
+		else{
 			this.setY(this.getY() - 1);
 		}
         this.setHasMoved();
@@ -56,7 +59,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveLeft() {
-		if(this.getX() == 1){
+		if(this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
 		}else{
 			this.setX(this.getX() - 1);
@@ -69,7 +72,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveDown() {
-		if(this.getY() == 8){
+		if (this.getMap().getOnTheMapXY(this.getX(), this.getY() + 1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
 		}else{
 			this.setY(this.getY() + 1);
@@ -82,7 +85,7 @@ public class Mobile extends Element implements IMobile {
 	 */
 	@Override
 	public void moveRight() {
-		if (this.getX() == 8){
+		if (this.getMap().getOnTheMapXY(this.getX() + 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
 		}
 		else {
@@ -174,7 +177,7 @@ public class Mobile extends Element implements IMobile {
 	 */
     @Override
 	public boolean isDead() {
-        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.ENEMY;
     }
     
     public boolean asWon() {
