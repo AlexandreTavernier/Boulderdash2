@@ -8,5 +8,6 @@ public enum Permeability {
 	PLAYER, 
 	ENEMY, 
 	TAKE, 
-	EXIT;
+	EXIT, 
+	DIG;
 }
