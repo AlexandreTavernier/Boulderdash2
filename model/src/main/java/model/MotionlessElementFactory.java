@@ -12,12 +12,15 @@ public abstract class MotionlessElementFactory  {
 	private static final MotionlessElement DIRT = new Dirt();
 	
 	private static final MotionlessElement DOOR = new Door();
+	
+	private static final MotionlessElement DIAMOND = new Diamond();
 
 	private static MotionlessElement[] motionlessElements = {
 		  WALL,
 		  AIR,
 		  DIRT,
 		  DOOR,
+		  DIAMOND,
 	};
 	
 	public static MotionlessElement createWall() {
@@ -36,6 +39,9 @@ public abstract class MotionlessElementFactory  {
 		return DOOR;
 	}
 	
+	public static MotionlessElement createDiamond(){
+		return DIAMOND;
+	}
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) 
 	{
 		for (final MotionlessElement motionlessElement : motionlessElements) {
