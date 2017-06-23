@@ -6,6 +6,7 @@ package model;
 
 import Interface.ISprite;
 import Interface.Permeability;
+import model.Mobile;
 
 public class Dirt extends MotionlessElement {
 	
@@ -17,9 +18,9 @@ public class Dirt extends MotionlessElement {
 	}
 	
 	public static ISprite setDirt(){
-		if (Mobile.getDig() == false){
+		if (Mobile.getIsDig() == false){
 			return SPRITE;
-		}else if (Mobile.getDig() == true){
+		}else if (Mobile.getIsDig() == true){
 			return SPRITEAIR;
 		}
 		

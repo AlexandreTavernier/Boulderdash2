@@ -16,7 +16,7 @@ public class Mobile extends Element implements IMobile {
 	private static final int SCOREMAX = 1;
 	
 	private Boolean win = false;
-	private Boolean isDig = false;
+	private static Boolean isDig = false;
 	
 	private Point position;
 	private Boolean alive = true;
@@ -237,11 +237,11 @@ public class Mobile extends Element implements IMobile {
         return this.board;
     }
 
-	public Boolean getIsDig() {
+	public static Boolean getIsDig() {
 		return isDig;
 	}
 
-	public void setIsDig(Boolean isDig) {
-		this.isDig = isDig;
+	public static void setIsDig(Boolean Dig) {
+		isDig = Dig;
 	}
 }
