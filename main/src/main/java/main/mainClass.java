@@ -25,7 +25,7 @@ public abstract class mainClass {
   public static void main(String[] args) throws IOException, InterruptedException {
 
 	//Create the player
-    final IBoulderdashModel model = new BoulderdashModel("C:/Users/malor/Documents/GitHub/Boulderdash2/scene1.txt", startX, startY);
+    final IBoulderdashModel model = new BoulderdashModel("C:/Users/taver/git/Boulderdash2/scene1.txt", startX, startY);
     //Diplay the map and the player
     final BoulderdashView view = new BoulderdashView(model.getMap(), model.getPlayer());
     //Get the control for the player

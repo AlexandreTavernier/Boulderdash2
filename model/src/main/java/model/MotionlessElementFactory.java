@@ -21,10 +21,6 @@ public abstract class MotionlessElementFactory  {
 		  DOOR,
 		  DIAMOND,
 		  DIRT,
-<<<<<<< HEAD
-=======
-
->>>>>>> 031515993a5e04c3afb7bb499c1040fbd2d88053
 	};
 
 	
@@ -40,10 +36,6 @@ public abstract class MotionlessElementFactory  {
 		return DOOR;
 	}
 	
-<<<<<<< HEAD
-
-=======
->>>>>>> 031515993a5e04c3afb7bb499c1040fbd2d88053
 	public static MotionlessElement createDiamond(){
 		return DIAMOND;
 	}
@@ -52,10 +44,7 @@ public abstract class MotionlessElementFactory  {
 		return DIRT;
 	}
 	
-<<<<<<< HEAD
 
-=======
->>>>>>> 031515993a5e04c3afb7bb499c1040fbd2d88053
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) 
 	{
 		for (final MotionlessElement motionlessElement : motionlessElements) {
