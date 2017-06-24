@@ -20,6 +20,7 @@ import Interface.IOrderPerformer;
 import Interface.UserOrder;
 import fr.exia.showboard.BoardFrame;
 
+//Implementation Runnable, KeyListener, IBoulderdashView 
 public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 19;
 	private static final int squareSize = 20;
@@ -47,6 +48,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 
 	@Override
     public final void run() {
+		
     	final BoardFrame boardFrame = new BoardFrame("Boulder Dash fan Game Java A1");
         boardFrame.setDimension(new Dimension(this.getMap().getWidth(), this.getMap().getHeight()));
         boardFrame.setDisplayFrame(this.closeView);
@@ -83,7 +85,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
         		System.out.print("\n");
         	}
         }
-
+        //Setup command, for moved the player
        private static UserOrder keyCodeToUserOrder(final int keyCode){
     	   UserOrder userOrder;
     	   switch (keyCode){
