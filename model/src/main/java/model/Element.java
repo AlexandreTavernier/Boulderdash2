@@ -14,11 +14,23 @@ public abstract class Element implements IElement {
 	private ISprite sprite;
 	private Permeability permeability;
 	
-	public Element(final ISprite sprite, final Permeability permeability){
+	public Element(final ISprite sprite, final Permeability permeability, int spriteX, int spriteY){
 		this.setSprite(sprite);
 		this.setPermeability(permeability);	
+		this.setSpriteX(spriteX);
+		this.setSpriteY(spriteY);
 	}
 	
+	public void setSpriteY(int spriteY) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setSpriteX(int spriteX) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/* (non-Javadoc)
 	 * @see model.IElement#getSprite()
 	 */

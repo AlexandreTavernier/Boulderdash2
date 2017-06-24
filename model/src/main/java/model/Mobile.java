@@ -16,24 +16,23 @@ public class Mobile extends Element implements IMobile {
 	private static final int SCOREMAX = 1;
 	
 	private Boolean win = false;
-	private static Boolean isDig = false;
+	private Boolean alive = true;
 	
 	private Point position;
-	private Boolean alive = true;
 	private IMap map;
 	private IBoard board;
 	
 	
 	
 	
-	Mobile(final ISprite sprite, final IMap map, final Permeability permeability){
-		super(sprite, permeability);
+	Mobile(final ISprite sprite, final IMap map, final Permeability permeability, int x, int y){
+		super(sprite, permeability,x,y);
 		this.setMap(map);
 		this.position = new Point();
 	}
 	
 	Mobile(final int x, final int y, final ISprite sprite, final IMap map, final Permeability permeability){
-		this(sprite, map, permeability);
+		this(sprite, map, permeability, x, y);
 		this.setX(x);
         this.setY(y);
 	}
@@ -51,7 +50,7 @@ public class Mobile extends Element implements IMobile {
 			this.setY(this.getY());
 		}
 		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DIG){
-			isDig();
+			
 			this.setY(this.getY() - 1);
 		}else if (this.getY() == 0){
 			this.setY(this.getY());
@@ -61,7 +60,7 @@ public class Mobile extends Element implements IMobile {
 		}
         this.setHasMoved();
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#moveLeft()
 	 */
@@ -71,7 +70,6 @@ public class Mobile extends Element implements IMobile {
 			this.setX(this.getX());
 		}
 		else if (this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.DIG){
-			isDig();
 			this.setX(this.getX() - 1);
 		}else{
 			this.setX(this.getX() - 1);
@@ -88,7 +86,6 @@ public class Mobile extends Element implements IMobile {
 			this.setY(this.getY());
 		}
 		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()+1).getPermeability() == Permeability.DIG){
-			isDig();
 			this.setY(this.getY() + 1);
 		}else{
 			this.setY(this.getY() + 1);
@@ -105,7 +102,6 @@ public class Mobile extends Element implements IMobile {
 			this.setX(this.getX());
 		}
 		else if (this.getMap().getOnTheMapXY(this.getX() +1, this.getY()).getPermeability() == Permeability.DIG){
-			isDig();
 			this.setX(this.getX() + 1);
 		}
 		else {
@@ -170,11 +166,6 @@ public class Mobile extends Element implements IMobile {
         }
     }    
 	
-	private static Boolean isDig(){
-		setIsDig(true);
-		System.out.println("Dig");
-		return getIsDig();
-	}
         
     /* (non-Javadoc)
 	 * @see model.IMobile#getMap()
@@ -236,12 +227,4 @@ public class Mobile extends Element implements IMobile {
     protected IBoard getBoard() {
         return this.board;
     }
-
-	public static Boolean getIsDig() {
-		return isDig;
-	}
-
-	public static void setIsDig(Boolean Dig) {
-		isDig = Dig;
-	}
 }

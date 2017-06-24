@@ -9,8 +9,8 @@ import Interface.Permeability;
 
 public class MotionlessElement extends Element {
 	
-	MotionlessElement(final ISprite sprite, final Permeability permeability){
-		super(sprite, permeability);
+	MotionlessElement(final ISprite sprite, final Permeability permeability, final int spriteX, final int spriteY){
+		super(sprite, permeability, spriteX, spriteY);
 	}
 
 	
