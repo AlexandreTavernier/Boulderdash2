@@ -19,7 +19,7 @@ public class Player extends Mobile {
 	private static final ISprite spriteTurnDown = new Sprite('P', "player.jpg");
 	private static final ISprite spriteTurnUp = new Sprite('P', "player_up.jpg");
 	//Setup score
-	public static int SCORE = 1;
+	public static int SCORE = 0;
 	
 	public Player(final int x, final int y, final IMap map) throws IOException{
 		super(x, y, sprite, map, Permeability.PLAYER);
