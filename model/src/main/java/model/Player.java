@@ -12,15 +12,15 @@ import Interface.ISprite;
 import Interface.Permeability;
 
 public class Player extends Mobile {
-
+	//Setup display player, left, right, up, down
 	private static final ISprite sprite = new Sprite('P', "player.jpg");
 	private static final ISprite spriteTurnLeft = new Sprite('P', "player_left.jpg");
 	private static final ISprite spriteTurnRight = new Sprite('P', "player_right.jpg");
 	private static final ISprite spriteTurnDown = new Sprite('P', "player.jpg");
 	private static final ISprite spriteTurnUp = new Sprite('P', "player_up.jpg");
-
+	//Setup score
 	public static int SCORE = 1;
-
+	
 	public Player(final int x, final int y, final IMap map) throws IOException{
 		super(x, y, sprite, map, Permeability.PLAYER);
 		spriteTurnLeft.loadImage();

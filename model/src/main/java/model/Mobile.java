@@ -45,12 +45,17 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveUp()
 	 */
 	@Override
+	//Operator use for move Up
 	public void moveUp() {
 		if(this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
 		}
+
 		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DIG){
+<<<<<<< HEAD
 			
+=======
+>>>>>>> f0fe6f766eb96d76cf3dd888495106e989b97ca1
 			this.setY(this.getY() - 1);
 		}else if (this.getY() == 0){
 			this.setY(this.getY());
@@ -65,6 +70,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveLeft()
 	 */
 	@Override
+	//Operator use for move Left
 	public void moveLeft() {
 		if(this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
@@ -81,6 +87,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveDown()
 	 */
 	@Override
+	//Operator use for move Down
 	public void moveDown() {
 		if (this.getMap().getOnTheMapXY(this.getX(), this.getY() + 1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
@@ -97,6 +104,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#moveRight()
 	 */
 	@Override
+	//Operator use for move Right
 	public void moveRight() {
 		if (this.getMap().getOnTheMapXY(this.getX() + 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
@@ -165,8 +173,12 @@ public class Mobile extends Element implements IMobile {
         	System.out.println("Won");
         }
     }    
+<<<<<<< HEAD
 	
         
+=======
+	   
+>>>>>>> f0fe6f766eb96d76cf3dd888495106e989b97ca1
     /* (non-Javadoc)
 	 * @see model.IMobile#getMap()
 	 */

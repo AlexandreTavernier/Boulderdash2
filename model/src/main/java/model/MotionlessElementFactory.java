@@ -42,6 +42,10 @@ public abstract class MotionlessElementFactory  {
 	public static MotionlessElement createDirt(){
 		return DIRT;
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f0fe6f766eb96d76cf3dd888495106e989b97ca1
 
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) 
 	{
