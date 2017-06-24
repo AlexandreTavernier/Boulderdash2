@@ -34,7 +34,6 @@ public abstract class Element implements IElement {
 	/* (non-Javadoc)
 	 * @see model.IElement#getSprite()
 	 */
-	@Override
 	public final ISprite getSprite(){
 		return this.sprite;
 	}
