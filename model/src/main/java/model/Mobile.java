@@ -14,33 +14,33 @@ import fr.exia.showboard.IBoard;
 
 public class Mobile extends Element implements IMobile {
 	private static final int SCOREMAX = 1;
-	
+
 	private Boolean win = false;
 	private Boolean alive = true;
-	
+
 	private Point position;
 	private IMap map;
 	private IBoard board;
-	
-	
-	
-	
+
+
+
+
 	Mobile(final ISprite sprite, final IMap map, final Permeability permeability, int x, int y){
 		super(sprite, permeability,x,y);
 		this.setMap(map);
 		this.position = new Point();
 	}
-	
+
 	Mobile(final int x, final int y, final ISprite sprite, final IMap map, final Permeability permeability){
 		this(sprite, map, permeability, x, y);
 		this.setX(x);
         this.setY(y);
 	}
-	
+
 	private void setMap(final IMap map) {
         this.map = map;
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#moveUp()
 	 */
@@ -52,10 +52,7 @@ public class Mobile extends Element implements IMobile {
 		}
 
 		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DIG){
-<<<<<<< HEAD
-			
-=======
->>>>>>> f0fe6f766eb96d76cf3dd888495106e989b97ca1
+
 			this.setY(this.getY() - 1);
 		}else if (this.getY() == 0){
 			this.setY(this.getY());
@@ -82,7 +79,7 @@ public class Mobile extends Element implements IMobile {
 		}
         this.setHasMoved();
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#moveDown()
 	 */
@@ -99,7 +96,7 @@ public class Mobile extends Element implements IMobile {
 		}
         this.setHasMoved();
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#moveRight()
 	 */
@@ -117,7 +114,7 @@ public class Mobile extends Element implements IMobile {
 		}
         this.setHasMoved();
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#doNothing()
 	 */
@@ -128,9 +125,9 @@ public class Mobile extends Element implements IMobile {
 
 	private void setHasMoved() {
     this.getMap().setMobileHasChanged();
-    
+
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#getX()
 	 */
@@ -138,7 +135,7 @@ public class Mobile extends Element implements IMobile {
 	public final int getX() {
         return this.getPosition().x;
     }
-	
+
 	/* (non-Javadoc)
 	 * @see model.IMobile#setX(int)
 	 */
@@ -151,8 +148,8 @@ public class Mobile extends Element implements IMobile {
         if(this.asWon()){
         	System.out.println("Won");
         }
-	}    
-	
+	}
+
     /* (non-Javadoc)
 	 * @see model.IMobile#getY()
 	 */
@@ -160,7 +157,7 @@ public class Mobile extends Element implements IMobile {
 	public final int getY() {
         return this.getPosition().y;
     }
-    
+
     /* (non-Javadoc)
 	 * @see model.IMobile#setY(int)
 	 */
@@ -172,21 +169,17 @@ public class Mobile extends Element implements IMobile {
         if(this.asWon()){
         	System.out.println("Won");
         }
-    }    
-<<<<<<< HEAD
+    }
 	
-        
-=======
-	   
->>>>>>> f0fe6f766eb96d76cf3dd888495106e989b97ca1
+
     /* (non-Javadoc)
 	 * @see model.IMobile#getMap()
 	 */
 	public IMap getMap() {
         return this.map;
-        }    
-    
-  
+        }
+
+
     /* (non-Javadoc)
 	 * @see model.IMobile#isAlive()
 	 */
@@ -194,13 +187,13 @@ public class Mobile extends Element implements IMobile {
 	public boolean isAlive() {
         return this.alive;
     }
-    
+
     protected void die() {
-    	
+
         this.alive = false;
         this.setHasMoved();
     }
-    
+
     /* (non-Javadoc)
 	 * @see model.IMobile#isDead()
 	 */
@@ -208,19 +201,19 @@ public class Mobile extends Element implements IMobile {
 	public boolean isDead() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.ENEMY;
     }
-    
+
     public boolean asWon() {
     	if (Player.SCORE == SCOREMAX ){
     		return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.EXIT;
     	}
 		return win;
     }
-    
+
     protected void win(){
     	this.win = true;
     	this.setHasMoved();
     }
-    
+
     /* (non-Javadoc)
 	 * @see model.IMobile#getPosition()
 	 */
@@ -228,14 +221,14 @@ public class Mobile extends Element implements IMobile {
 	public Point getPosition() {
         return this.position;
     }
-        
+
     /* (non-Javadoc)
 	 * @see model.IMobile#setPosition(java.awt.Point)
 	 */
 	public void setPosition(final Point position) {
         this.position = position;
     }
-    
+
     protected IBoard getBoard() {
         return this.board;
     }

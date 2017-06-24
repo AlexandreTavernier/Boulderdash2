@@ -10,8 +10,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import Interface.IMap;
-import Interface.ISprite;
 import Interface.Permeability;
 
 public class MobileTest {
