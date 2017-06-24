@@ -14,6 +14,8 @@ public abstract class MotionlessElementFactory  {
 	private static final MotionlessElement DIAMOND = new Diamond();
 
 	private static final MotionlessElement DIRT = new Dirt();
+	
+	private static final MotionlessElement ENEMY1 = new Enemy1();
 
 	private static MotionlessElement[] motionlessElements = {
 		  WALL,
@@ -21,6 +23,7 @@ public abstract class MotionlessElementFactory  {
 		  DOOR,
 		  DIAMOND,
 		  DIRT,
+		  ENEMY1,
 	};
 	
 	public static MotionlessElement createWall() {
@@ -41,6 +44,10 @@ public abstract class MotionlessElementFactory  {
 
 	public static MotionlessElement createDirt(){
 		return DIRT;
+	}
+	
+	public static MotionlessElement createEnemy1(){
+		return ENEMY1;
 	}
 
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) 

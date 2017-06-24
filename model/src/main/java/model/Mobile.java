@@ -13,7 +13,7 @@ import Interface.Permeability;
 import fr.exia.showboard.IBoard;
 
 public class Mobile extends Element implements IMobile {
-	private static final int SCOREMAX = 1;
+	private static final int SCOREMAX = 10;
 
 	private Boolean win = false;
 	private Boolean alive = true;
@@ -50,11 +50,12 @@ public class Mobile extends Element implements IMobile {
 		if(this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
 		}
-
-		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DIG){
-
+		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.TAKE){
 			this.setY(this.getY() - 1);
-		}else if (this.getY() == 0){
+			Player.SCORE = Player.SCORE + 1;
+			System.out.println(Player.SCORE);
+		}
+		else if (this.getY() == 0){
 			this.setY(this.getY());
 		}
 		else{
@@ -72,9 +73,12 @@ public class Mobile extends Element implements IMobile {
 		if(this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
 		}
-		else if (this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.DIG){
+		else if (this.getMap().getOnTheMapXY(this.getX() - 1, this.getY()).getPermeability() == Permeability.TAKE){
 			this.setX(this.getX() - 1);
-		}else{
+			Player.SCORE = Player.SCORE + 1;
+			System.out.println(Player.SCORE);
+		}
+		else{
 			this.setX(this.getX() - 1);
 		}
         this.setHasMoved();
@@ -89,9 +93,12 @@ public class Mobile extends Element implements IMobile {
 		if (this.getMap().getOnTheMapXY(this.getX(), this.getY() + 1).getPermeability() == Permeability.BLOCKING){
 			this.setY(this.getY());
 		}
-		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()+1).getPermeability() == Permeability.DIG){
+		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()+1).getPermeability() == Permeability.TAKE){
 			this.setY(this.getY() + 1);
-		}else{
+			Player.SCORE = Player.SCORE + 1;
+			System.out.println(Player.SCORE);
+		}
+		else{
 			this.setY(this.getY() + 1);
 		}
         this.setHasMoved();
@@ -106,8 +113,10 @@ public class Mobile extends Element implements IMobile {
 		if (this.getMap().getOnTheMapXY(this.getX() + 1, this.getY()).getPermeability() == Permeability.BLOCKING){
 			this.setX(this.getX());
 		}
-		else if (this.getMap().getOnTheMapXY(this.getX() +1, this.getY()).getPermeability() == Permeability.DIG){
+		else if (this.getMap().getOnTheMapXY(this.getX() +1, this.getY()).getPermeability() == Permeability.TAKE){
 			this.setX(this.getX() + 1);
+			Player.SCORE = Player.SCORE + 1;
+			System.out.println(Player.SCORE);
 		}
 		else {
 			this.setX(this.getX() + 1);
@@ -143,7 +152,7 @@ public class Mobile extends Element implements IMobile {
         this.getPosition().x = x;
         if (this.isDead()) {
         	System.out.println("Dead");
-            //this.die();
+            this.die();
         }
         if(this.asWon()){
         	System.out.println("Won");
@@ -189,7 +198,6 @@ public class Mobile extends Element implements IMobile {
     }
 
     protected void die() {
-
         this.alive = false;
         this.setHasMoved();
     }
@@ -203,7 +211,7 @@ public class Mobile extends Element implements IMobile {
     }
 
     public boolean asWon() {
-    	if (Player.SCORE == SCOREMAX ){
+    	if (Player.SCORE >= SCOREMAX ){
     		return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.EXIT;
     	}
 		return win;
