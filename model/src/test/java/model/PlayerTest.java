@@ -1,4 +1,4 @@
-package view;
+package model;
 
 import static org.junit.Assert.*;
 
@@ -6,11 +6,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+public class PlayerTest {
 
-
-public class BoulderdashViewTest {
-
-	//test of every methods of BoulderDashView
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -20,45 +17,43 @@ public class BoulderdashViewTest {
 	}
 
 	@Test
-	public void testDisplayMessage() {
+	public void testMoveUp() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testRun() {
+	public void testMoveLeft() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testShow() {
+	public void testMoveDown() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testKeyTyped() {
+	public void testMoveRight() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testKeyPressed() {
+	public void testDoNothing() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testSetOrderPerformer() {
+	public void testDie() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testKeyTyped1() {
+	public void testPlayer() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testKeyReleased() {
+	public void testTake() {
 		fail("Not yet implemented");
 	}
-	
-	
 
 }

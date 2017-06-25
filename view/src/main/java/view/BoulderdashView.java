@@ -87,6 +87,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
         	}
         }
         //Setup command, for moved the player
+        
        private static UserOrder keyCodeToUserOrder(final int keyCode){
     	   UserOrder userOrder;
     	   switch (keyCode){
