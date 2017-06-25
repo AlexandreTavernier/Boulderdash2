@@ -1,5 +1,5 @@
 /**
- * @author Alexandre
+ * @author Thomas
  * @version 1.1
  */
 package model;

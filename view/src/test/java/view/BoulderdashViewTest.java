@@ -8,6 +8,7 @@ import org.junit.Test;
 
 public class BoulderdashViewTest {
 
+	//test of every methods of BoulderDashView
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}

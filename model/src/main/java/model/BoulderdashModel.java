@@ -6,7 +6,7 @@ import Interface.IMobile;
 import Interface.IBoulderdashModel;
 
 /**
- * @author Bruno
+ * @author Bruno Thomas
  * @version 1
  */
 

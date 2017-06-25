@@ -31,7 +31,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 	private IOrderPerformer orderPerformer;
 
 
-
+//Implementation of map and player 
 	public BoulderdashView(final IMap Map, final IMobile Player) throws IOException{
 		this.setView(mapView);
 		this.setMap(Map);
@@ -46,6 +46,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
         JOptionPane.showMessageDialog(null, message);
 	}
 
+	//Implementation of boardframe with welcome message and start fonction
 	@Override
     public final void run() {
 		

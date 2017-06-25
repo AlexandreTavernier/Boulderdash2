@@ -1,7 +1,7 @@
 package model;
 
 /**
- * @author Alexandre
+ * @author Thomas Alexandre
  * @version 1.1
  */
 

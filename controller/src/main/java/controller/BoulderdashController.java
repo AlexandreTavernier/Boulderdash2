@@ -1,5 +1,5 @@
 /**
- * @author Bruno
+ * @author Bruno & Thomas
  * @version 1
  */
 
