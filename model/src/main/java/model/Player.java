@@ -55,7 +55,7 @@ public class Player extends Mobile {
 	}
 
 	protected final void die() {
-			super.die();
+			super.isDead();
 			this.setSprite(sprite);
 			
 	}

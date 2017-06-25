@@ -37,10 +37,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
   //play
   @Override
   public final void play() throws InterruptedException {
-      //Check if the player is Alive
-		  while (this.getModel().getPlayer().isAlive()) {
-			  //Check if the player as won
-			  while (!this.getModel().getPlayer().asWon()){
+      //Check if the player is Alive or Check if the player as won
+		  while (this.getModel().getPlayer().isAlive() || !this.getModel().getPlayer().asWon() ) {
 	          Thread.sleep(speed);
 	          //move the player
 	          switch (this.getStackOrder()) {
@@ -67,21 +65,19 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	          this.clearStackOrder();
 	          //this.getView().followPlayer();
 	          
-	      }
-		  //Display win message
-	      this.getView().displayMessage("You Win!");
+	      	
+	      	if (this.getModel().getPlayer().asWon()){ 
+	      	//Check this player is alive and display won
+	      		this.getView().displayMessage("You win!");
+	      		break;
+	      	}
+	      	if (this.getModel().getPlayer().isDead() == false){
+	      		//Check this player is dead and display game over
+	      		this.getView().displayMessage("Game Over");
+	      		break;
+	      	}
 	      
-	      break;
-	  }
-	//Check this player is alive and have won again
-	if (this.getModel().getPlayer().isAlive() && this.getModel().getPlayer().asWon()){ 
-	}
-	else{
-		//Check this player is dead and have game over
-		this.getView().displayMessage("Game Over");
-	}
-	
-     
+		 }
   }
 
   @Override

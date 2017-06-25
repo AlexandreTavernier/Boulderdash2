@@ -23,7 +23,7 @@ import fr.exia.showboard.BoardFrame;
 //Implementation Runnable, KeyListener, IBoulderdashView 
 public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView {
 	private static final int mapView = 19;
-	private static final int squareSize = 20;
+	private static final int squareSize = 50;
 	private Rectangle closeView;
 	private IMap map;
 	private IMobile Player;
