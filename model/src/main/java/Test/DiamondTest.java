@@ -10,17 +10,15 @@ import org.junit.Test;
 
 import model.Sprite;
 
-public class PlayerTest {
+public class DiamondTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		this.actual = new Sprite();
-		}
+	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		this.actual = new Sprite();
-		}
+	}
 
 	@Before
 	public void setUp() throws Exception {
@@ -29,12 +27,11 @@ public class PlayerTest {
 
 	@After
 	public void tearDown() throws Exception {
-		this.actual = new Sprite();
-		}
+	}
 
 	@Test
 	public void test() {
 		fail("Not yet implemented");
-	}
 
+	}
 }
