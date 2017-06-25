@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar"/>
+	<classpathentry kind="lib" path="C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.jar"/>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
