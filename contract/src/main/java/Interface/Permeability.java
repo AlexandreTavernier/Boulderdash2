@@ -6,7 +6,7 @@ public enum Permeability {
 	PENETRABLE, 
 	PUSH,
 	PLAYER, 
-	ENEMY, 
+	ENEMY,
 	TAKE, 
 	EXIT, 
 	DIG;

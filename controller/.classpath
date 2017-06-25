@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar"/>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -22,16 +23,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="/model"/>
-	<classpathentry kind="src" path="/view"/>
-<<<<<<< HEAD
-	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar"/>
-=======
-	<classpathentry kind="lib" path="C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.doc.jar!/"/>
-		</attributes>
-	</classpathentry>
->>>>>>> ee8c5abfc615c895a4c97baebb2081313a2c4d01
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

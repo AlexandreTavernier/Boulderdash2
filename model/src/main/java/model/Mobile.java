@@ -173,6 +173,7 @@ public class Mobile extends Element implements IMobile {
 	public final void setY(final int y) {
         this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
         if (this.isDead()) {
+        	System.out.println("Dead");
             this.die();
         }
         if(this.asWon()){
