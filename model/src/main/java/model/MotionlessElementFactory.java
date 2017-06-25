@@ -14,12 +14,9 @@ public abstract class MotionlessElementFactory  {
 	private static final MotionlessElement DIAMOND = new Diamond();
 
 	private static final MotionlessElement DIRT = new Dirt();
-	
-<<<<<<< HEAD
-=======
+
 	private static final MotionlessElement ENEMY1 = new Enemy1();
 
->>>>>>> ee8c5abfc615c895a4c97baebb2081313a2c4d01
 	private static MotionlessElement[] motionlessElements = {
 		  WALL,
 		  AIR,

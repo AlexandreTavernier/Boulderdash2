@@ -55,6 +55,11 @@ public class Mobile extends Element implements IMobile {
 			Player.SCORE = Player.SCORE + 1;
 			System.out.println(Player.SCORE);
 		}
+		else if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.ENEMY){
+			this.setY(this.getY() - 1);
+			this.die();
+			System.out.println("hit");
+		}
 		else if (this.getY() == 0){
 			this.setY(this.getY());
 		}
@@ -150,10 +155,6 @@ public class Mobile extends Element implements IMobile {
 	 */
 	public final void setX(final int x) {
         this.getPosition().x = x;
-        if (this.isDead()) {
-        	System.out.println("Dead");
-            this.die();
-        }
         if(this.asWon()){
         	System.out.println("Won");
         }
@@ -172,9 +173,6 @@ public class Mobile extends Element implements IMobile {
 	 */
 	public final void setY(final int y) {
         this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
-        if (this.isDead()) {
-            this.die();
-        }
         if(this.asWon()){
         	System.out.println("Won");
         }
@@ -200,14 +198,6 @@ public class Mobile extends Element implements IMobile {
     protected void die() {
         this.alive = false;
         this.setHasMoved();
-    }
-
-    /* (non-Javadoc)
-	 * @see model.IMobile#isDead()
-	 */
-    @Override
-	public boolean isDead() {
-        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.ENEMY;
     }
 
     public boolean asWon() {
@@ -240,4 +230,9 @@ public class Mobile extends Element implements IMobile {
     protected IBoard getBoard() {
         return this.board;
     }
+
+	@Override
+	public boolean isDead() {
+		return alive;
+	}
 }
