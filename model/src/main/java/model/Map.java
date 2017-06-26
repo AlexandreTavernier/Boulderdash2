@@ -14,7 +14,7 @@ import Interface.IElement;
 import Interface.IMap;
 
 public class Map extends Observable implements IMap {
-	private int width = 16;
+	private int width ;
 	private int height;
 	private IElement[][] onTheMap;
 	
