@@ -23,10 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/malor/Documents/GitHub/Boulderdash2/showboard.jar"/>
-=======
-	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar"/>
->>>>>>> ec4b9e37cadd28bbf0f52cf042e38cce166c9503
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
