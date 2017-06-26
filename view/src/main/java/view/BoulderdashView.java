@@ -29,6 +29,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 	private IMobile Player;
 	private int view;
 	private IOrderPerformer orderPerformer;
+	public static boolean isKeyTyped = false;
 
 
 //Implementation of map and player 
@@ -114,6 +115,7 @@ public class BoulderdashView implements  Runnable, KeyListener, IBoulderdashView
 
        @Override
        public void KeyTyped(final KeyEvent keyEvent){
+    	   isKeyTyped  = true;
 
        }
 
