@@ -23,7 +23,8 @@ public class BoulderdashControllerTest {
 
 	@Test
 	public void testPlay() {
-		fail("Not yet implemented");
+		boolean Play = false;
+		assertEquals(Play, BoulderdashController.isPlayed);
 	}
 
 	@Test

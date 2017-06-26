@@ -17,16 +17,15 @@ import view.BoulderdashView;
 
 public abstract class mainClass {
   //Intial value for the player
-  private static final int startX =5;
+  public static final int startX =5;
 
-  private static final int startY = 0;
+  public static final int startY = 0;
 
 
   public static void main(String[] args) throws IOException, InterruptedException {
 
-	//Create the player
+
     final IBoulderdashModel model = new BoulderdashModel("C:/Users/malor/Documents/GitHub/Boulderdash2/Maps txt/Map 1.txt", startX, startY);
-    //Diplay the map and the player
     final BoulderdashView view = new BoulderdashView(model.getMap(), model.getPlayer());
     //Get the control for the player
     final IBoulderdashController controller = new BoulderdashController(view, model);

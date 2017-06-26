@@ -26,6 +26,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 
   // The stack order
   private UserOrder stackOrder;
+  
+  static boolean isPlayed = false;
 
   //Instantiates a new insane vehicles controller.
   public BoulderdashController(final IBoulderdashView view, final IBoulderdashModel model) {
@@ -40,6 +42,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
       //Check if the player is Alive or Check if the player as won
 		  while (this.getModel().getPlayer().isAlive() || !this.getModel().getPlayer().asWon() ) {
 	          Thread.sleep(speed);
+	          isPlayed = true;
 	          //move the player
 	          switch (this.getStackOrder()) {
 	              case RIGHT:
