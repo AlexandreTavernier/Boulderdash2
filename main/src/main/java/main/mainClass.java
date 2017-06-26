@@ -34,6 +34,5 @@ public abstract class mainClass {
     view.setOrderPerformer(controller.getOrderPeformer());
     //Launch the game
     controller.play();
-
   }
 }
