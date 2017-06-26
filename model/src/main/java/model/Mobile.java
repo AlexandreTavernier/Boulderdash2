@@ -172,7 +172,7 @@ public class Mobile extends Element implements IMobile {
 	 * @see model.IMobile#setY(int)
 	 */
 	public final void setY(final int y) {
-        this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
+        this.getPosition().y = y;
         if(this.asWon()){
         	System.out.println("Won");
         }

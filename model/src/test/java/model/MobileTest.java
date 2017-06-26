@@ -19,12 +19,13 @@ public class MobileTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		
 	}
 
 	@Before
 	public void setUp() throws Exception {
 		this.Mobile = new Mobile(Sprite, Map, Permeability.BLOCKING, 0, 0);
-				}
+	}
 
 	
 

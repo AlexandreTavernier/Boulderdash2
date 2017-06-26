@@ -10,10 +10,12 @@ public class PlayerTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		fail("Not yet implemented");
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		fail("Not yet implemented");
 	}
 
 	@Test
