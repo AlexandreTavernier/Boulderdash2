@@ -8,7 +8,6 @@ import org.junit.Test;
 
 
 
-
 public class BoulderdashViewTest {
 
 	//test of every methods of BoulderDashView
