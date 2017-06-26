@@ -23,8 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/model"/>
-	<classpathentry kind="src" path="/controller"/>
-	<classpathentry kind="lib" path="C:/Users/Thomas/Boulderdash2/showboard.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taver/git/Boulderdash2/showboard.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

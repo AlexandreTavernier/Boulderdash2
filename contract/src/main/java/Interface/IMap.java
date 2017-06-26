@@ -17,5 +17,4 @@ public interface IMap {
 	void setMobileHasChanged();
 
 	Observable getObservable();
-
 }

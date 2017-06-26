@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+
+
 public class BoulderdashViewTest {
 
 	//test of every methods of BoulderDashView
@@ -56,5 +58,7 @@ public class BoulderdashViewTest {
 	public void testKeyReleased() {
 		fail("Not yet implemented");
 	}
+	
+	
 
 }
