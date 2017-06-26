@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import main.mainClass;
-
 
 
 public class BoulderdashViewTest {
@@ -37,8 +35,6 @@ public class BoulderdashViewTest {
 	}
 
 	@Test
-<<<<<<< HEAD
-=======
 	public void testKeyTyped() {
 		boolean isKeyTyped = false;
 		boolean keyTyped = BoulderdashView.isKeyTyped;
@@ -46,25 +42,3 @@ public class BoulderdashViewTest {
 		}
 	}
 
-	@Test
->>>>>>> 5c68d8aed7ada8672b9963304edb7ae2d53374c6
-	public void testKeyPressed() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetOrderPerformer() {
-		fail("Not yet implemented");
-	}
-<<<<<<< HEAD
-=======
-
-	@Test
-	public void testKeyReleased() {
-		fail("Not yet implemented");
-	}
-	
-	
-
->>>>>>> 5c68d8aed7ada8672b9963304edb7ae2d53374c6
-}
