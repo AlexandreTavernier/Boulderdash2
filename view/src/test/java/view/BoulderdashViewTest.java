@@ -35,11 +35,6 @@ public class BoulderdashViewTest {
 	}
 
 	@Test
-	public void testKeyTyped() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testKeyPressed() {
 		fail("Not yet implemented");
 	}
@@ -48,17 +43,4 @@ public class BoulderdashViewTest {
 	public void testSetOrderPerformer() {
 		fail("Not yet implemented");
 	}
-
-	@Test
-	public void testKeyTyped1() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testKeyReleased() {
-		fail("Not yet implemented");
-	}
-	
-	
-
 }

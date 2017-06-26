@@ -58,25 +58,4 @@ public class MobileTest {
 		assertEquals(ExpectedY, Y);
 	}
 
-	@Test
-	public void testGetMap() {
-		fail("Not yet implemented");
-	}
-
-	
-	@Test
-	public void testGetPosition() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPosition() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetBoard() {
-		fail("Not yet implemented");
-	}
-
 }
